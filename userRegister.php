@@ -29,22 +29,86 @@
             <div class="col-md-6">
             <div class="well" style="background-color:#ccffff; border-radius:20px">
             <form action="#" method="POST">
-                <table class="table" style="">
+                <table class="table" style="TD{font-size: 18pt;}">
                     <tr>
-                        <th>Title</th>
+                        <th>First Name</th>
                         <td>
-                            <input type="text" name="titleBox" value="" class="form-control"/>
+                            <input type="text" name="firstname" value="" class="form-control"/>
+                        </td>
+                        <th>Last Name</th>
+                        <td>
+                            <input type="text" name="lastname" value="" class="form-control"/>
                         </td>
                     </tr>
                     <tr>
-                        <th>Title2</th>
+                        <th>Email Address</th>
                         <td>
-                            <input type="text" name="titleBox2" value="" class="form-control"/>
+                            <input type="text" name="email" value="" placeholder='"jane@dc.gov"' class="form-control"/>
+                        </td>
+                        <th>Gender</th>
+                        <td>
+                            <select name="gender">
+                                <option value="null">Select a Gender</option>
+                                <option value="female">Female</option>
+                                <option value="male">Male</option>
+                                <option value="other">Female</option>
+                                <option value="dne">Prefer Not To Say</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>D.O.B.</th>
+                        <td>
+                            <input type="text" name="month" value="" placeholder="MM" class="form-control"/>
+                        </td>
+                        <td>
+                            <input type="text" name="day" value="" placeholder="DD" class="form-control"/>
+                        </td>
+                        <td>
+                            <input type="text" name="year" value="" placeholder="YYYY" class="form-control"/>
+                        </td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <th>Street Address</th>
+                        <td>
+                            <input type="text" name="address" value="" placeholder='"123 Main St."'class="form-control"/>
+                        </td>
+                        <th>City</th>
+                        <td>
+                            <input type="text" name="city" value="" class="form-control"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Zipcode</th>
+                        <td>
+                            <input type="text" name="zipcode" value="" class="form-control"/>
+                        </td>
+                        <th>State</th>
+                        <td>
+                            <select name="stateDD">
+                                <option value="null">Select a State</option>
+                                <option value="state1">State One</option>
+                                <option value="state2">State Two</option>
+                                <option value="state3">State Three</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Social Security</th>
+                        <td>
+                            <input type="text" name="ssn1" value="" class="form-control"/>
+                        </td>
+                        <td>
+                            <input type="text" name="ssn2" value="" class="form-control"/>
+                        </td>
+                        <td>
+                            <input type="text" name="ssn3" value="" class="form-control"/>
                         </td>
                     </tr>
                     <tr>
                         <th colspan="2">
-                            <button class="btn" style=" background-color: #809fff; color:white;" type="submit"> Submit</button> &nbsp;
+                            <button class="btn" style=" background-color: #809fff; color:white;" type="submit"> Register</button> &nbsp;
                             <button class="btn btn-primary"  style=" background-color: #809fff; color:white;" type="reset"> Clear</button>
                         </th>
                         <td></td>

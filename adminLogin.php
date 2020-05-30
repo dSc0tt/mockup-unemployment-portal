@@ -8,7 +8,7 @@
             height:500px;
         }
     </style>
-        <title>Bootstrap</title>
+        <title>AdminLogin</title>
         <!-- CSS only -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -19,8 +19,8 @@
     </head>
     <body>
     <div class="container">
-            <p class="jumbotron" style="font-size:40px; background-color: #809fff; text-align:center; color:white;">Login</p>
-            
+            <p class="jumbotron" style="font-size:40px; background-color: #809fff; text-align:center; color:white;">Admin Login</p>
+
         <div class="row" id="main">
             <div class="col-md-3"></div>
             <div class="col-md-6">
@@ -28,15 +28,15 @@
             <form action="#" method="POST">
                 <table class="table" style="">
                     <tr>
-                        <th>Title</th>
+                        <th>Username</th>
                         <td>
-                            <input type="text" name="titleBox" value="" class="form-control"/>
+                            <input type="text" name="Username" value="" class="form-control"/>
                         </td>
                     </tr>
                     <tr>
-                        <th>Title2</th>
+                        <th>Password</th>
                         <td>
-                            <input type="text" name="titleBox2" value="" class="form-control"/>
+                            <input type="password" name="pass" value="" class="form-control"/>
                         </td>
                     </tr>
                     <tr>
@@ -54,7 +54,7 @@
         </div>
 </div>
         <div class="jumbotron footer" style="margin-bottom:0; background-color: #809fff;">
-        <p>This is the bottom of the page</p>
+        <p> ©BdpaUnemploymentInc.</p>
         </div>
        </div>
     </body>
