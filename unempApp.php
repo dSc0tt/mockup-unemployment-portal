@@ -11,7 +11,7 @@
             height:500px;
         }
     </style>
-        <title>Bootstrap</title>
+        <title>DC Unemployment Portal</title>
         <!-- CSS only -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -22,26 +22,93 @@
     </head>
     <body>
     <div class="container">
-            <p class="jumbotron" style="font-size:40px; background-color: #809fff; text-align:center; color:white;">Login</p>
+            <p class="jumbotron" style="font-size:50px; background-color: #809fff; text-align:center; color:white;">Unemployment Claims</p>
             
         <div class="row" id="main">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
+            <div class="col-md-1.5"></div>
+            <div class="col-md-11">
             <div class="well" style="background-color:#ccffff; border-radius:20px">
             <form action="#" method="POST">
                 <table class="table" style="">
                     <tr>
-                        <th>Title</th>
+                        <th>Last Date of Employment</th>
                         <td>
-                            <input type="text" name="titleBox" value="" class="form-control"/>
+                            <input type="text" name="mm" value="MM" class="form-control"/>
+                        </td>
+                        <td>
+                            <input type="text" name="dd" value="DD" class="form-control"/>
+                        </td>
+                        <td>
+                            <input type="text" name="yy" value="YYYY" class="form-control"/>
                         </td>
                     </tr>
                     <tr>
-                        <th>Title2</th>
+                        <th>Previous Employer/Company Name</th>
                         <td>
-                            <input type="text" name="titleBox2" value="" class="form-control"/>
+                            <input type="text" name="titleBox13" value="" class="form-control"/>
                         </td>
                     </tr>
+                    <tr>
+                        <th>Previous Employer Department</th>
+                        <td>
+                            <input type="text" name ="titleBox14" value="" class="form-control"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Previous Employer Address</th>
+                        <td>
+                            <input type="text" name ="titleBox15" value="" class="form-control"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Previous Employer State ID</th>
+                        <td>
+                            <input type="text" name ="titleBox16" value="" class="form-control"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Previous Employer City</th>
+                        <td>
+                            <input type="text" name ="titleBox17" value="" class="form-control"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Previous Employer Email</th>
+                        <td>
+                            <input type="email" name ="titleBox18" value="janedoe@gmail.com" class="form-control"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Previous Employer Phone</th>
+                        <td>
+                            <input type="textbox" name ="first3" value="" class="form-control"/>
+                        </td>
+                        <td>
+                            <input type="textbox" name ="second3" value="" class="form-control"/>
+                        </td>
+                        <td>
+                            <input type="textbox" name ="last4" value="" class="form-control"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Estimation of Annual Salary of Last Employment</th>
+                        <td>
+                            <input type="text" name ="titleBox20" value="$" class="form-control"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Your Social Security Number</th>
+                        <td>
+                            <input type="text" name ="ssn1" value="" class="form-control"/> 
+                        </td>
+                        <td>    
+                            <input type="text" name ="ssn2" value="" class="form-control"/> 
+                        </td>
+                        <td>    
+                            <input type="text" name ="ssn3" value="" class="form-control"/> 
+                        </td>
+                    </tr>
+    
                     <tr>
                         <th colspan="2">
                             <button class="btn" style=" background-color: #809fff; color:white;" type="submit"> Submit</button> &nbsp;
@@ -56,8 +123,6 @@
             <div class="col-md-3"></div>
         </div>
 </div>
-        <div class="jumbotron footer" style="margin-bottom:0; background-color: #809fff;">
-        <p>This is the bottom of the page</p>
         </div>
        </div>
     </body>
