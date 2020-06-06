@@ -4,7 +4,7 @@ if(isset($_POST['submit']))
 
     include "db.php";
     $uname=trim($_POST['Username']);
-    $ssn=trim($_POST ['social_security_number']);
+    $ssn=trim($_POST ['SSN1'].$_POST ['SSN2'].$_POST ['SSN3']);
     $query = "SELECT * FROM applicants WHERE username= '$uname' AND soc_sec_id='$ssn'";
     $result = mysqli_query($conn, $query);
     $row= mysqli_fetch_assoc($result);

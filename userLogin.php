@@ -29,53 +29,19 @@ require("applicantProcessLogin.php");
             <div class="col-md-3"></div>
             <div class="col-md-6">
             <div>
-            <form action="userProcessLogin.php" method="POST">
+            <form method="POST">
             <div class="form-group">
-                    <label for="Username">Username:</label>
+                    <label for="Username">Username</label>
                     <input type="text" class="form-control" id="Username" name="Username" placeholder="Enter Username">
                 </div>
                 <div class="form-group">
-                    <label for="Password">Password</label>
-                    <input type="password" class="form-control" id="Password" name="PASS" placeholder="Password">
-                </div>
-                <div class="form-group">
                     <label for="SSN">Social Security Number</label>
-                    <input type="password" class="form-control col-md-2" id="SSN" name="SSN" placeholder="SSN"> <input type="password" class=" col-md-2 form-control" id="SSN" name="SSN2" placeholder="SSN"><input type="password" class=" col-md-2 form-control" id="SSN" name="SSN3" placeholder="SSN">
+                    <input type="password" class="form-control col-md-2" id="SSN" name="SSN1" placeholder="###">
+                    <input type="password" class=" col-md-2 form-control" id="SSN" name="SSN2" placeholder="##">
+                    <input type="password" class=" col-md-2 form-control" id="SSN" name="SSN3" placeholder="####">
                 </div>
-                <button type="submit" class="btn btn-primary" style=" background-color: #809fff; color:white;">Submit</button> <button style=" background-color: #809fff; color:white;" type="reset" class="btn btn-primary">Clear</button>
-            <!--    <table class="table" style="">
-                    <tr>
-                        <th>Username</th>
-                        <td>
-                            <input type="text" name="Username" value="" class="form-control"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>SSN</th>
-                        <td>
-                            <input type="password" name="social_security_number" value="" class="form-control"/>
-                        </td>
-                    </tr>
-<<<<<<< HEAD
-                    <th>SSN</th>
-                    <td>
-                        <input type="password" name="SSN" value="" class="form-control"/>
-                    </td>
-                </tr>
-=======
->>>>>>> 39dec7a70c017e403454dba561e49cef8ea4a6df
-                    <tr>
-                        <th colspan="2">
-                            <button class="btn" style=" background-color: #809fff; color:white;" name="submit" type="submit"> Log In</button> &nbsp;
-                            <button class="btn btn-primary"  style=" background-color: #809fff; color:white;" type="reset"> Register</button>
-                        </th>
-                        <td></td>
-                    </tr>
-                </table>
-                </form>
-                </div>
-            </div>
-            <div class="col-md-3"></div> -->
+                <button type="submit" class="btn btn-primary" style=" background-color: #809fff; color:white;" name="submit">Log In</button>
+                <br><p>Haven't filed a claim yet? <a href="userRegister.php">Register here</a> to file your first claim.</br> Admin user? <a href="adminlogin.php">Log in here</a> to manage pending applications.</p>
             </div>
             </div>
         </div>
