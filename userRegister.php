@@ -27,9 +27,53 @@
         <div class="row" id="main">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-            <div class="well" style="background-color:#ccffff; border-radius:20px">
-            <form action="#" method="POST">
-                <table class="table" style="TD{font-size: 18pt;}">
+            <div>
+            <form action="userProcessRegister.php" method="POST">
+            <div class="form-group">
+                    <label for="fName">First Name:</label>
+                    <input type="text" class="form-control" id="fName" name="firstname" placeholder="Enter First Name">
+                </div>
+                <div class="form-group">
+                    <label for="lName">Last Name:</label>
+                    <input type="text" class="form-control" id="f\lName" name="lastname" placeholder="Enter LastName">
+                </div>
+                <div class="form-group">
+                    <label for="Password">Password</label>
+                    <input type="password" class="form-control" id="Password" name="pass" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="Address">Address</label>
+                    <input type="text" class="form-control" id="Address" name="address" placeholder="123 Hello St">
+                </div>
+                <div class="form-group">
+                    <label for="City">City</label>
+                    <input type="text" class="form-control" id="City" name="city" placeholder="Marlowe">
+                </div>
+                <div class="form-group">
+                    <label for="City">City</label>
+                    <input type="text" class="form-control" id="City" name="city" placeholder="Marlowe">
+                </div>
+                <div class="form-group">
+                    <label for="zip">Zip Code</label>
+                    <input type="text" class="form-control" id="zip" name="zipcode" placeholder="12334">
+                </div>
+                <div class="form-group">
+                    <label for="SSN">Social Security Number</label>
+                    <input type="password" class="form-control col-md-2" id="SSN" name="SSN" placeholder="SSN"> <input type="password" class=" col-md-2 form-control" id="SSN" name="SSN2" placeholder="SSN"><input type="password" class=" col-md-2 form-control" id="SSN" name="SSN3" placeholder="SSN">
+                </div>
+                <div class="form-group">
+                    <label for="Gender">Select a Gender</label>
+                    <select class="form-control" id="Gender">
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                    </select>
+                    <!-- too tired to include the state row. Its kinda confusing -->
+                <div class="form-group">
+                    <label for="DOB">D.O.B</label>
+                    <input type="text" class="form-control col-md-2" id="DOB" name="Month" placeholder="MM"> <input type="text" class=" col-md-2 form-control" id="DOB" name="Day" placeholder="DD"><input type="text" class=" col-md-2 form-control" id="DOB" name="Year" placeholder="YY">
+                </div>
+                <button type="submit" class="btn btn-primary" style=" background-color: #809fff; color:white;" name="submit">Submit</button> <button style=" background-color: #809fff; color:white;" type="reset" class="btn btn-primary">Clear</button>
+             <!--   <table class="table" style="TD{font-size: 18pt;}">
                     <tr>
                         <th>First Name</th>
                         <td>
@@ -117,12 +161,14 @@
                 </form>
                 </div>
             </div>
-            <div class="col-md-3"></div>
+            <div class="col-md-3"></div> -->
+            </div>
+            </div>
         </div>
 </div>
-        <div class="jumbotron footer" style="margin-bottom:0; background-color: #809fff;">
+      <!--  <div class="jumbotron footer" style="margin-bottom:0; background-color: #809fff;">
         <p>This is the bottom of the page</p>
-        </div>
+        </div> -->
        </div>
     </body>
 </html>

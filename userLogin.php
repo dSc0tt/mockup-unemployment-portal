@@ -27,9 +27,22 @@
         <div class="row" id="main">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-            <div class="well" style="background-color:#ccffff; border-radius:20px">
-            <form action="#" method="POST">
-                <table class="table" style="">
+            <div>
+            <form action="userProcessLogin.php" method="POST">
+            <div class="form-group">
+                    <label for="Username">Username:</label>
+                    <input type="text" class="form-control" id="Username" name="Username" placeholder="Enter Username">
+                </div>
+                <div class="form-group">
+                    <label for="Password">Password</label>
+                    <input type="password" class="form-control" id="Password" name="PASS" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="SSN">Social Security Number</label>
+                    <input type="password" class="form-control col-md-2" id="SSN" name="SSN" placeholder="SSN"> <input type="password" class=" col-md-2 form-control" id="SSN" name="SSN2" placeholder="SSN"><input type="password" class=" col-md-2 form-control" id="SSN" name="SSN3" placeholder="SSN">
+                </div>
+                <button type="submit" class="btn btn-primary" style=" background-color: #809fff; color:white;">Submit</button> <button style=" background-color: #809fff; color:white;" type="reset" class="btn btn-primary">Clear</button>
+            <!--    <table class="table" style="">
                     <tr>
                         <th>Username</th>
                         <td>
@@ -44,7 +57,7 @@
                     </tr>
                     <th>SSN</th>
                     <td>
-                        <input type="password" name="social security number" value="" class="form-control"/>
+                        <input type="password" name="SSN" value="" class="form-control"/>
                     </td>
                 </tr>
                     <tr>
@@ -58,11 +71,13 @@
                 </form>
                 </div>
             </div>
-            <div class="col-md-3"></div>
+            <div class="col-md-3"></div> -->
+            </div>
+            </div>
         </div>
 </div>
         <div class="jumbotron footer" style="margin-bottom:0; background-color: #809fff;">
-        <p >©BdpaUnemploymentInc.</p>
+        <p style="text-align: Center"><center>©BdpaUnemploymentInc.</center></p>
         </div>
        </div>
     </body>

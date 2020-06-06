@@ -24,9 +24,18 @@
         <div class="row" id="main">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-            <div class="well" style="background-color:#ccffff; border-radius:20px">
-            <form action="#" method="POST">
-                <table class="table" style="">
+            <div class="well" >
+            <form action="adminProcessLogin.php" method="POST">
+                <div class="form-group">
+                    <label for="Username">Username:</label>
+                    <input type="text" class="form-control" id="Username" name="Username" placeholder="Enter Username">
+                </div>
+                <div class="form-group">
+                    <label for="Password">Password</label>
+                    <input type="password" class="form-control" id="Password" name="pass" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary" style=" background-color: #809fff; color:white;">Submit</button> <button style=" background-color: #809fff; color:white;" type="reset" class="btn btn-primary">Clear</button>
+              <!--  <table class="table" style="">
                     <tr>
                         <th>Username</th>
                         <td>
@@ -50,7 +59,10 @@
                 </form>
                 </div>
             </div>
-            <div class="col-md-3"></div>
+            <div class="col-md-3"></div> -->
+            </div>
+            </div>
+            </form>
         </div>
 </div>
         <div class="jumbotron footer" style="margin-bottom:0; background-color: #809fff;">
