@@ -1,5 +1,6 @@
 <?php
 //Admin login for unemployment portal
+include("adminProcessLogin.php");
 ?>
 <html>
     <head>
@@ -25,41 +26,17 @@
             <div class="col-md-3"></div>
             <div class="col-md-6">
             <div class="well" >
-            <form action="adminProcessLogin.php" method="POST">
+            <form method="POST">
                 <div class="form-group">
-                    <label for="Username">Username:</label>
-                    <input type="text" class="form-control" id="Username" name="Username" placeholder="Enter Username">
+                    <label for="Username">Username</label>
+                    <input type="text" class="form-control" id="Username" name="uname" placeholder="Enter Username">
                 </div>
                 <div class="form-group">
                     <label for="Password">Password</label>
                     <input type="password" class="form-control" id="Password" name="pass" placeholder="Password">
                 </div>
-                <button type="submit" class="btn btn-primary" style=" background-color: #809fff; color:white;">Submit</button> <button style=" background-color: #809fff; color:white;" type="reset" class="btn btn-primary">Clear</button>
-              <!--  <table class="table" style="">
-                    <tr>
-                        <th>Username</th>
-                        <td>
-                            <input type="text" name="Username" value="" class="form-control"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Password</th>
-                        <td>
-                            <input type="password" name="pass" value="" class="form-control"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th colspan="2">
-                            <button class="btn" style=" background-color: #809fff; color:white;" type="submit"> Log In</button> &nbsp;
-                            <button class="btn btn-primary"  style=" background-color: #809fff; color:white;" type="reset"> Back to User Login</button>
-                        </th>
-                        <td></td>
-                    </tr>
-                </table>
-                </form>
-                </div>
-            </div>
-            <div class="col-md-3"></div> -->
+                <button type="submit" class="btn btn-primary" style=" background-color: #809fff; color:white;" name="submit">Log In</button>
+                <br><p>Haven't filed a claim yet? <a href="userRegister.php">Register here</a> to file your first claim.</br>Not an admin user? <a href="userLogin.php">Log in here</a> to log in as an applicant.</p>
             </div>
             </div>
             </form>
