@@ -45,7 +45,7 @@ require("applicantProcessLogin.php");
                     </tr>
                     <tr>
                         <th colspan="2">
-                            <button class="btn" style=" background-color: #809fff; color:white;" type="submit"> Log In</button> &nbsp;
+                            <button class="btn" style=" background-color: #809fff; color:white;" name="submit" type="submit"> Log In</button> &nbsp;
                             <button class="btn btn-primary"  style=" background-color: #809fff; color:white;" type="reset"> Register</button>
                         </th>
                         <td></td>
