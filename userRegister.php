@@ -1,5 +1,6 @@
 <?php
 //User registration form for unemployment portal
+include("applicantProcessRegister.php");
 ?>
 <?php
 //Admin login for unemployment portal
@@ -21,154 +22,102 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     </head>
     <body>
-    <div class="container">
-            <p class="jumbotron" style="font-size:40px; background-color: #809fff; text-align:center; color:white;">Login</p>
-            
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+            <a class="navbar-brand" href="#">Helping Hand</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="welcome.php">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="userLogin.php">Sign-In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="userRegister.php">Make A Claim</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">View Your Claims</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+        <p class="jumbotron" style="font-size:40px; background-color: #809fff; text-align:center; color:white;">Register As New Applicant</p>    
+        <div class="container">
         <div class="row" id="main">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-            <div>
-            <form action="userProcessRegister.php" method="POST">
-            <div class="form-group">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+            <form method="POST">
+            <div class="input-group">
+                <div class="form-group">
                     <label for="fName">First Name:</label>
-                    <input type="text" class="form-control" id="fName" name="firstname" placeholder="Enter First Name">
+                    <input type="text" class="form-control col-md-10" id="fName" name="firstname" placeholder="Enter First Name">
                 </div>
                 <div class="form-group">
                     <label for="lName">Last Name:</label>
-                    <input type="text" class="form-control" id="f\lName" name="lastname" placeholder="Enter LastName">
+                    <input type="text" class="form-control col-md-10" id="f\lName" name="lastname" placeholder="Enter LastName">
                 </div>
                 <div class="form-group">
                     <label for="Password">Password</label>
-                    <input type="password" class="form-control" id="Password" name="pass" placeholder="Password">
+                    <input type="password" class="form-control col-md-10" id="Password" name="pass" placeholder="">
                 </div>
+                <div class="form-group">
+                    <label for="Password">Confirm Password</label>
+                    <input type="password" class="form-control col-md-10" id="cPassword" name="cPass" placeholder="">
+                </div>
+            </div>
+            <div class="input-group">
                 <div class="form-group">
                     <label for="Address">Address</label>
-                    <input type="text" class="form-control" id="Address" name="address" placeholder="123 Hello St">
+                    <input type="text" class="form-control col-md-10" id="Address" name="address" placeholder="123 Sesame St">
                 </div>
                 <div class="form-group">
                     <label for="City">City</label>
-                    <input type="text" class="form-control" id="City" name="city" placeholder="Marlowe">
-                </div>
-                <div class="form-group">
-                    <label for="City">City</label>
-                    <input type="text" class="form-control" id="City" name="city" placeholder="Marlowe">
+                    <input type="text" class="form-control col-md-8" id="City" name="city" placeholder="Marlowe">
                 </div>
                 <div class="form-group">
                     <label for="zip">Zip Code</label>
-                    <input type="text" class="form-control" id="zip" name="zipcode" placeholder="12334">
+                    <input type="text" class="form-control  col-md-4" id="zip" name="zipcode" placeholder="12334">
                 </div>
+            </div>
+            <div class="input-group">
                 <div class="form-group">
                     <label for="SSN">Social Security Number</label>
-                    <input type="password" class="form-control col-md-2" id="SSN" name="SSN" placeholder="SSN"> <input type="password" class=" col-md-2 form-control" id="SSN" name="SSN2" placeholder="SSN"><input type="password" class=" col-md-2 form-control" id="SSN" name="SSN3" placeholder="SSN">
+                    <div class="input-group">
+                        <input type="password" class="form-control col-md-2" id="SSN1" name="SSN" placeholder="SSN">
+                        <input type="password" class="form-control col-md-2" id="SSN2" name="SSN2" placeholder="SSN">
+                        <input type="password" class="form-control  col-md-2" id="SSN3" name="SSN3" placeholder="SSN">
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="Gender">Select a Gender</label>
-                    <select class="form-control" id="Gender">
+                    <select class="form-control col-md-12" id="Gender">
                     <option value="Female">Female</option>
                     <option value="Male">Male</option>
+                    <option value="Male">Non-Binary</option>
                     </select>
                     <!-- too tired to include the state row. Its kinda confusing -->
+                </div>
                 <div class="form-group">
                     <label for="DOB">D.O.B</label>
-                    <input type="text" class="form-control col-md-2" id="DOB" name="Month" placeholder="MM"> <input type="text" class=" col-md-2 form-control" id="DOB" name="Day" placeholder="DD"><input type="text" class=" col-md-2 form-control" id="DOB" name="Year" placeholder="YY">
-                </div>
-                <button type="submit" class="btn btn-primary" style=" background-color: #809fff; color:white;" name="submit">Submit</button> <button style=" background-color: #809fff; color:white;" type="reset" class="btn btn-primary">Clear</button>
-             <!--   <table class="table" style="TD{font-size: 18pt;}">
-                    <tr>
-                        <th>First Name</th>
-                        <td>
-                            <input type="text" name="firstname" value="" class="form-control"/>
-                        </td>
-                        <th>Last Name</th>
-                        <td>
-                            <input type="text" name="lastname" value="" class="form-control"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Email Address</th>
-                        <td>
-                            <input type="text" name="email" value="" placeholder='"jane@dc.gov"' class="form-control"/>
-                        </td>
-                        <th>Gender</th>
-                        <td>
-                            <select name="gender">
-                                <option value="null">Select a Gender</option>
-                                <option value="female">Female</option>
-                                <option value="male">Male</option>
-                                <option value="other">Female</option>
-                                <option value="dne">Prefer Not To Say</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>D.O.B.</th>
-                        <td>
-                            <input type="text" name="month" value="" placeholder="MM" class="form-control"/>
-                        </td>
-                        <td>
-                            <input type="text" name="day" value="" placeholder="DD" class="form-control"/>
-                        </td>
-                        <td>
-                            <input type="text" name="year" value="" placeholder="YYYY" class="form-control"/>
-                        </td>
-                    </tr>
-                    <br>
-                    <tr>
-                        <th>Street Address</th>
-                        <td>
-                            <input type="text" name="address" value="" placeholder='"123 Main St."'class="form-control"/>
-                        </td>
-                        <th>City</th>
-                        <td>
-                            <input type="text" name="city" value="" class="form-control"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Zipcode</th>
-                        <td>
-                            <input type="text" name="zipcode" value="" class="form-control"/>
-                        </td>
-                        <th>State</th>
-                        <td>
-                            <select name="stateDD">
-                                <option value="null">Select a State</option>
-                                <option value="state1">State One</option>
-                                <option value="state2">State Two</option>
-                                <option value="state3">State Three</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Social Security</th>
-                        <td>
-                            <input type="text" name="ssn1" value="" class="form-control"/>
-                        </td>
-                        <td>
-                            <input type="text" name="ssn2" value="" class="form-control"/>
-                        </td>
-                        <td>
-                            <input type="text" name="ssn3" value="" class="form-control"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th colspan="2">
-                            <button class="btn" style=" background-color: #809fff; color:white;" type="submit"> Register</button> &nbsp;
-                            <button class="btn btn-primary"  style=" background-color: #809fff; color:white;" type="reset"> Clear</button>
-                        </th>
-                        <td></td>
-                    </tr>
-                </table>
-                </form>
+                    <div class="input-group">
+                        <input type="text" class="form-control col-md-2" id="DOBM" name="Month" placeholder="MM">
+                        <input type="text" class="form-control col-md-2" id="DOBD" name="Day" placeholder="DD">
+                        <input type="text" class="form-control col-md-2" id="DOBY" name="Year" placeholder="YY">
+                    </div>
                 </div>
             </div>
-            <div class="col-md-3"></div> -->
-            </div>
+            <button type="submit" class="btn btn-primary" style=" background-color: #809fff; color:white;" name="submit">Register</button>   
+            <br><p>Already filed a claim? <a href="userRegister.php">Log in here</a> to check its status or file an appeal.</br></p>
             </div>
         </div>
-</div>
+        <div class="col-md-1"></div>
+        </div>
       <!--  <div class="jumbotron footer" style="margin-bottom:0; background-color: #809fff;">
         <p>This is the bottom of the page</p>
         </div> -->
-       </div>
+       
     </body>
 </html>
