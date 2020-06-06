@@ -1,5 +1,6 @@
 <?php
 //This is the login page for basic users of the unemployment portal
+require("applicantProcessLogin.php");
 ?>
 <?php
 //Admin login for unemployment portal
@@ -37,20 +38,15 @@
                         </td>
                     </tr>
                     <tr>
-                        <th>Password</th>
+                        <th>SSN</th>
                         <td>
-                            <input type="password" name="Pass" value="" class="form-control"/>
+                            <input type="password" name="social_security_number" value="" class="form-control"/>
                         </td>
                     </tr>
-                    <th>SSN</th>
-                    <td>
-                        <input type="password" name="social security number" value="" class="form-control"/>
-                    </td>
-                </tr>
                     <tr>
                         <th colspan="2">
-                            <button class="btn" style=" background-color: #809fff; color:white;" type="submit"> Submit</button> &nbsp;
-                            <button class="btn btn-primary"  style=" background-color: #809fff; color:white;" type="reset"> Clear</button>
+                            <button class="btn" style=" background-color: #809fff; color:white;" type="submit"> Log In</button> &nbsp;
+                            <button class="btn btn-primary"  style=" background-color: #809fff; color:white;" type="reset"> Register</button>
                         </th>
                         <td></td>
                     </tr>

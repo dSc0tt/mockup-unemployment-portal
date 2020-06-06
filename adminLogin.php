@@ -41,8 +41,8 @@
                     </tr>
                     <tr>
                         <th colspan="2">
-                            <button class="btn" style=" background-color: #809fff; color:white;" type="submit"> Submit</button> &nbsp;
-                            <button class="btn btn-primary"  style=" background-color: #809fff; color:white;" type="reset"> Clear</button>
+                            <button class="btn" style=" background-color: #809fff; color:white;" type="submit"> Log In</button> &nbsp;
+                            <button class="btn btn-primary"  style=" background-color: #809fff; color:white;" type="reset"> Back to User Login</button>
                         </th>
                         <td></td>
                     </tr>
