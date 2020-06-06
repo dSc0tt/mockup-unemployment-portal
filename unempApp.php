@@ -21,10 +21,31 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     </head>
     <body>
-    <div class="container">
-            <p class="jumbotron" style="font-size:50px; background-color: #809fff; text-align:center; color:white;">Unemployment Claims</p>
-            
-        <div class="row" id="main">
+    <div class="">
+            <p class="jumbotron" style="font-size:40px; background-color: #809fff; text-align:center; color:white;">Unemployment Claims</p>
+    <form class="col-lg-6 offset-lg-3">
+        <div class="row" >
+            <label for="exampleInputDate">Last Date of Employment</label>
+            <div class="col-3">
+            <input type="text" class="form-control" id="InputMonth" aria-describedby="Date" placeholder="MM" name="MM">
+           <div class="form-row">
+            <input type="text" class="form-control" id="InputDay" aria-describedby="Date" placeholder="DD" name="DD">
+            <div class="col-3">
+            <input type="text" class="form-control" id="InputYear" aria-describedby="Date" placeholder="YYYY" name="YYYY">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="row" >
+            <label for="exampleInputEmail1">Previous Employer Information</label>
+            <div class="col-10">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <!--<div class="row" id="main">
             <div class="col-md-1.5"></div>
             <div class="col-md-11">
             <div class="well" style="background-color:#ccffff; border-radius:20px">
@@ -81,13 +102,13 @@
                     <tr>
                         <th>Previous Employer Phone</th>
                         <td>
-                            <input type="textbox" name ="first3" value="" class="form-control"/>
+                            <input type="textbox" name ="first3" value="XXX" class="form-control"/>
                         </td>
                         <td>
-                            <input type="textbox" name ="second3" value="" class="form-control"/>
+                            <input type="textbox" name ="second3" value="XXX" class="form-control"/>
                         </td>
                         <td>
-                            <input type="textbox" name ="last4" value="" class="form-control"/>
+                            <input type="textbox" name ="last4" value="XXXX" class="form-control"/>
                         </td>
                     </tr>
                     <tr>
@@ -122,8 +143,8 @@
             </div>
             <div class="col-md-3"></div>
         </div>
-</div>
+</div> --!>
         </div>
-       </div>
+       </div> 
     </body>
-</html>
+</html> 
