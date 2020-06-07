@@ -1,6 +1,7 @@
 <?php
 //User registration form for unemployment portal
 include("applicantProcessRegister.php");
+//include('db.php');
 ?>
 <?php
 //Admin login for unemployment portal
@@ -53,62 +54,88 @@ include("applicantProcessRegister.php");
             <div class="input-group">
                 <div class="form-group">
                     <label for="fName">First Name:</label>
-                    <input type="text" class="form-control col-md-10" id="fName" name="firstname" placeholder="Enter First Name">
+                    <input type="text" class="form-control col-md-10" id="fName" name="firstname" placeholder="Enter First Name" value="<?php echo $fname ; ?>">
+                    <div class="invalid-feedback">
+                        Please provide a valid city.
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="lName">Last Name:</label>
-                    <input type="text" class="form-control col-md-10" id="f\lName" name="lastname" placeholder="Enter LastName">
+                    <input type="text" class="form-control col-md-10" id="f\lName" name="lastname" placeholder="Enter LastName" value="<?php echo $lname ; ?>">
                 </div>
                 <div class="form-group">
                     <label for="Password">Password</label>
-                    <input type="password" class="form-control col-md-10" id="Password" name="pass" placeholder="">
+                    <input type="password" class="form-control col-md-10" id="Password" name="pass" placeholder="" value="">
                 </div>
                 <div class="form-group">
                     <label for="Password">Confirm Password</label>
-                    <input type="password" class="form-control col-md-10" id="cPassword" name="cPass" placeholder="">
+                    <input type="password" class="form-control col-md-10" id="cPassword" name="cPass" placeholder="" value="">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control col-md-10" id="email" name="email" placeholder="janedoe@email.org" value="<?php echo $email ; ?>">
                 </div>
             </div>
             <div class="input-group">
                 <div class="form-group">
                     <label for="Address">Address</label>
-                    <input type="text" class="form-control col-md-10" id="Address" name="address" placeholder="123 Sesame St">
+                    <input type="text" class="form-control col-md-10" id="Address" name="address" placeholder="123 Sesame St" value="<?php echo $address ; ?>">
                 </div>
                 <div class="form-group">
                     <label for="City">City</label>
-                    <input type="text" class="form-control col-md-8" id="City" name="city" placeholder="Marlowe">
+                    <input type="text" class="form-control col-md-10" id="City" name="city" placeholder="Marlowe" value="<?php echo $city ; ?>">
                 </div>
                 <div class="form-group">
                     <label for="zip">Zip Code</label>
-                    <input type="text" class="form-control  col-md-4" id="zip" name="zipcode" placeholder="12334">
+                    <input type="text" class="form-control  col-md-6" id="zip" name="zipcode" placeholder="30987" value="<?php echo $zip ; ?>">
+                </div>
+                <div class="form-group">
+                <label for="Gender">Select a State</label>
+                <?php
+                    $query = "SELECT * from states";
+                    $results= mysqli_query($conn,$query);
+                    $row= mysqli_fetch_assoc($results);
+                ?>
+                    <select class="form-control col-md-6" id="State" name="states" value="<?php echo $states ; ?>">
+                        <option value="null">Select A State</option>
+                        <?php while($row = mysqli_fetch_assoc($results))
+                        {
+                        ?>
+                        <option value="<?php echo $row['id']; ?>"> <?php echo $row['name']; ?></option>
+                        <?php } ?>
+                    </select>
                 </div>
             </div>
-            <div class="input-group">
+            <!--<div class="input-group">-->
                 <div class="form-group">
                     <label for="SSN">Social Security Number</label>
-                    <div class="input-group">
-                        <input type="password" class="form-control col-md-2" id="SSN1" name="SSN" placeholder="SSN">
-                        <input type="password" class="form-control col-md-2" id="SSN2" name="SSN2" placeholder="SSN">
-                        <input type="password" class="form-control  col-md-2" id="SSN3" name="SSN3" placeholder="SSN">
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="SSN1" maxlength="3" name="SSN1" placeholder="SSN">
+                            <input type="password" class="form-control" id="SSN2" maxlength="2" name="SSN2" placeholder="SSN">
+                            <input type="password" class="form-control" id="SSN3" maxlength="4" name="SSN3" placeholder="SSN">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
+                <!--</div>
+                <div class="form-group">-->
                     <label for="Gender">Select a Gender</label>
-                    <select class="form-control col-md-12" id="Gender">
-                    <option value="Female">Female</option>
-                    <option value="Male">Male</option>
-                    <option value="Male">Non-Binary</option>
+                    <select class="form-control col-md-6" id="Gender" name="gender">
+                        <option value="null">Select A Gender</option>
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                        <option value="Male">Non-Binary</option>
                     </select>
                     <!-- too tired to include the state row. Its kinda confusing -->
                 </div>
                 <div class="form-group">
                     <label for="DOB">D.O.B</label>
                     <div class="input-group">
-                        <input type="text" class="form-control col-md-2" id="DOBM" name="Month" placeholder="MM">
+                        <input type="text" class="form-control col-md-2" id="DOBM" maxlength="" name="Month" placeholder="MM">
                         <input type="text" class="form-control col-md-2" id="DOBD" name="Day" placeholder="DD">
                         <input type="text" class="form-control col-md-2" id="DOBY" name="Year" placeholder="YY">
                     </div>
                 </div>
-            </div>
+            <!--</div>-->
             <button type="submit" class="btn btn-primary" style=" background-color: #809fff; color:white;" name="submit">Register</button>   
             <br><p>Already filed a claim? <a href="userRegister.php">Log in here</a> to check its status or file an appeal.</br></p>
             </div>
