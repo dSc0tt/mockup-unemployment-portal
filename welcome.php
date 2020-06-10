@@ -77,8 +77,7 @@
         <div class="jumbotron footer" style="margin-bottom:0; background-color: #809fff;">
         <h3> <center> Helping Hand© <center></h3>
         <p>Hours of Operation: 24/7 Monday-Sunday</p>
-        <p>Phone Number</p>
-        <p>Instagram</p>
+        <p>Phone Number: 1-240-XXX-XXXX</p>
         </div>
        </div>
     </body>
