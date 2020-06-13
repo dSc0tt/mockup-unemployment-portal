@@ -13,7 +13,8 @@ if(isset($_POST['submit']))
         session_start();
         $_SESSION['firstname']= $row['first_name'];
         $_SESSION['lastname']= $row['last_name'];
-        header('location:viewClaims.php');
+        $_SESSION['adminID']=$row['employee_id'];
+        header('location:adminViewAllClaims.php');
     }
     else {
         echo '<div class="alert alert-danger" role="alert">
