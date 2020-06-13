@@ -111,7 +111,7 @@ if($MultipleQ == 'null')
             header('location:cant_file_claim.php');
         }
         else{
-            header('location: appFileClaim.php');
+            header('location: appRegister.php');
         }
 }
 
