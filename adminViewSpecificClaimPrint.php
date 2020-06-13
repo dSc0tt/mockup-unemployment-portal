@@ -53,8 +53,9 @@
                 </div>
                 <div class="col-md-3"></div>
             </div>
-            <div class="jumbotron footer" style="margin-bottom:0; background-color: white">
+            <div class="jumbotron footer" style="margin-bottom:0; background-color: #ffe5ea">
             <p style="text-align:center;"> ©BdpaUnemploymentInc.</p>
+            
             </div>
        </div>
     </body>

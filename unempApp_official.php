@@ -20,7 +20,7 @@ include ("db.php");
     </head>
     <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
-    <a class="navbar-brand" href="#"><img src="Images\bdpa_jobless_pic.png" alt="BDPA LOGO" width="300px" height="80px"></a>
+    <a class="navbar-brand" href="#">Helping Hand</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,20 +29,24 @@ include ("db.php");
             <li class="nav-item">
                 <a class="nav-link" href="welcome.php">Home <span class="sr-only">(current)</span></a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="userLogin.php">Sign-In</a>
+            </li>
             <li class="nav-item">
-                <a class="nav-link" href="userLogin.php">Inbox</a>
+                <a class="nav-link" href="userRegister.php">Make A Claim</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">View Your Claims</a>
             </li>
             </ul>
         </div>
         </nav>
-   <div class="jumbotron" style="font-size:40px; background-color: #ffe5ea; text-align:center; color:black;"><p>File a Claim</p>
+   <div class="jumbotron" style="font-size:40px; background-color: #ffe5ea; text-align:center; color:white;"><p>File a Claim</p>
         </div>
      <!-- <div class="row" id="main">-->
-        <center>
-          <div class="container">
-          <div class="col-md-4"></div>
-            <div class="col-md-6">
-            <form method="POST">
+          <center> <div class="col-md-2"></div>
+            <div class="col-md-5">
+           <form method="POST">
                 <div class="form-group">
                     <h6>Your Information</h6>
                     <br>
@@ -55,58 +59,38 @@ include ("db.php");
                             <input type="text" class="form-control col-md-3" id="YYYY" name="Date3" placeholder="YYYY">   
                         </div>
                         </div>
-                        
-                <div class="form-group">
-                        <label for="Salary">Current Salary</label>
-                        <input type="text" class="form-control col-md-4" id="Salary" name="Salary1" placeholder="$">
+                        </div>
+               
+                <label for="Salary">Current Salary</label>
+                <div class="input group">
+                            <input type="text" class="form-control col-md-2" id="Current Salary" placeholder="$">
                 </div>
-                        <!--</div>-->
+                <br>
+                <br>
+            <div class="col-md-3"></div>
+            <div class="col-md-5">
+            <form method="POST">
+                    <div class="form-group">
+                        <h6>Information about Previous Employer</h6>
+                        <br>
+                        <label for="Name of Employer">Name</label>
+                        <div class="input-group">
+                            <input type="text"class="form-control" id="Name" placeholder="Enter Name">
+                        <br>
+                        <br>
+                        <br>
+                            </div>
+                        <label for="Department">Department</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="Dept." placeholder="Enter Dept. Name">
+                        </div>
+                        <br>
                         
-                    
-              <div class="form-group">
-                        <label for="SSN">Social Security Number</label>
-                       <!-- <div class="input-group">
-                                <input type="password" class="form-control col-md-2" id="SSN" name="SSN1" placeholder="###">
-                                <div class="col-sm-1"><p>-</p></div>
-                                <input type="password" class="form-control col-md-2" id="SSN" name="SSN2" placeholder="##">
-                                <div class="col-sm-1"><p>-</p></div>
-                                <input type="password" class="form-control col-md-2" id="SSN" name="SSN3" placeholder="####">
-
-             </div>-->
-                            <div class="input-group">
-                                            <input type="password" class="form-control col-md-3" id="SSN" name="SSN1" placeholder="###">
-                                            <div class="col-sm-1"><p>-</p></div>
-                                            <input type="password" class="form-control col-md-3" id="SSN" name="SSN2" placeholder="##">
-                                            <div class="col-sm-1"></p>-</p></div>
-                                            <input type="password" class="form-control col-md-3" id="SSN" name="SSN3" placeholder="####">   
-                                        </div>
-             </div>
-                    <br>
-                    
-                <!--<div class="col-md-7"></div>-->
-                <div class="col-md-14">
-                <form method="POST">
-                        <div class="form-group">
-                            <h6>Information about Previous Employer</h6>
-                            <br>
-                            <label for="Name of Employer">Name</label>
-                            <div class="input-group">
-                                <input type="text"class="form-control" id="Name" placeholder="Enter Name">
-                            <br>
-                            <br>
-                            <br>
-                                </div>
-                            <label for="Department">Department</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="Dept." placeholder="Enter Dept. Name">
-                            </div>
-                            <br>
-                            
-                            <label for="Address">Address</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="Address" placeholder="Enter Address">
-                            </div>
-                            <br>               
+                        <label for="Address">Address</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="Address" placeholder="Enter Address">
+                        </div>
+                        <br>               
                 <div class="form-group">
                 <label for="State">Select a State</label>
                 <?php
@@ -125,10 +109,10 @@ include ("db.php");
                 </div>
             </div>
             <br>
-                <label for="Zip Code">Zip Code</label>
+                <center><label for="Zip Code">Zip Code</label>
                 <div class="input-group">
                             <input type="text" class="form-control" id="Zip Code" placeholder="Enter Zip Code">
-                </div>
+                </div></center>
                 <br>
                 <label for="City">City</label>
                 <div class="input group">
@@ -140,7 +124,7 @@ include ("db.php");
                             <input type="text" class="form-control" id="Email" placeholder="Enter Email">
                 </div>
                 <br>
-                <label for="Phone Number">Phone Number</label>
+                <center><label for="Phone Number">Phone Number</label>
                 <div class="input-group">
                             <input type="text" class="form-control col-md-3" id="Phone Number1" name="Phone Number1" placeholder="XXX">
                             <div class="col-sm-1"><p>-</p></div>
@@ -148,7 +132,7 @@ include ("db.php");
                             <div class="col-sm-1"><p>-</p></div>
                             <input type="text" class="form-control col-md-3" id="Phone Number3" name="Phone Number3" placeholder="XXXX">
                              
-                </div>
+                </div></center>
                 
                
         </div>
@@ -185,10 +169,10 @@ include ("db.php");
     <br>
     <br>-->
     <!--<div class="jumbotron; col-md-5">-->
-    </form>
     <br>
     <br>
-    <center><button class="btn" style=" background-color:#e0e0e0;  height: 50px; width:100px;" type="submit"> <font size=+2>Submit</font size></button></center>
+    <br>
+    <br>
     <br>
     <br>
     <br>
