@@ -41,7 +41,7 @@ include ("db.php");
             </ul>
         </div>
         </nav>
-   <div class="jumbotron" style="font-size:40px; background-color: #cc0000; text-align:center; color:white;"><p>File a Claim</p>
+   <div class="jumbotron" style="font-size:40px; background-color: #ffe5ea; text-align:center; color:black;"><p>File a Claim</p>
         </div>
      <!-- <div class="row" id="main">-->
         <center>
@@ -198,7 +198,7 @@ include ("db.php");
     <br>
     <br>
     <br>
-    <div class="jumbotron footer" style="margin-bottom:0; background-color:#cc0000;text-align:center">
+    <div class="jumbotron footer" style="margin-bottom:0; background-color:#ffe5ea;text-align:center">
         <p style="text-align: Center"><center>©BdpaUnemploymentInc.</center></p>
         <p style="text-align: Center"><center>Hours of Operation: 24/7 Monday-Sunday</center></p>
         <p style="text-align: Center"><center>Phone Number: 1-240-XXX-XXXX</center></p>

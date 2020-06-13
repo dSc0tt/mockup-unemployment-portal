@@ -41,7 +41,7 @@
       </div>
     </nav>
     <div class="">
-            <p class="jumbotron" style="font-size:60px; background-color: #cc0000; text-align:center; color:white;">BDPA Unemployment Inc.</p>
+            <p class="jumbotron" style="font-size:40px; background-color: #ffe5ea; text-align:center; color:black;">BDPA Unemployment Inc.</p>
             <!--<h1><center>Thank you for visiting ©BdpaUnemploymentInc.</center><h1>--> 
             <br>
             <h2> <b><center> COVID-19 UPDATE AND INSTRUCTIONS:</center></b></h2> 
@@ -74,7 +74,7 @@
         <br>
         <br>
   
-        <div class="jumbotron footer" style="margin-bottom:0; background-color: #cc0000;">
+        <div class="jumbotron footer" style="margin-bottom:0; background-color: #ffe5ea;">
         <p style="text-align: Center"><center>©BdpaUnemploymentInc.</center></p>
         <p style="text-align: Center"><center>Hours of Operation: 24/7 Monday-Sunday</center></p>
         <p style="text-align: Center"><center>Phone Number: 1-240-XXX-XXXX</center></p>

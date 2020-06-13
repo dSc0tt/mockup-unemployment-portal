@@ -59,7 +59,7 @@ require("applicantProcessLogin.php");
                 color:#fff;
             }
 </style>
-        <p class="jumbotron" style="font-size:40px; background-color: #cc0000; text-align:center; color:white;">Log In</p>
+        <p class="jumbotron" style="font-size:40px; background-color: #ffe5ea; text-align:center; color:black;">Log In</p>
         <div class="container">
         <div class="row" id="main">
             <div class="col-md-3"></div>
@@ -88,7 +88,7 @@ require("applicantProcessLogin.php");
             <div class="mid-col-3"></div>
         </div>
         </div>
-        <div class="jumbotron footer" style="margin-bottom:0; background-color: #cc0000;">
+        <div class="jumbotron footer" style="margin-bottom:0; background-color: #ffe5ea;">
         <p style="text-align: Center"><center>©BdpaUnemploymentInc.</center></p>
         <p style="text-align: Center"><center>Hours of Operation: 24/7 Monday-Sunday</center></p>
         <p style="text-align: Center"><center>Phone Number: 1-240-XXX-XXXX</center></p>

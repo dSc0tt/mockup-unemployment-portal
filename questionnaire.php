@@ -42,7 +42,7 @@
             </ul>
         </div>
         </nav>
-   <div class="jumbotron" style="font-size:40px; background-color: #800000; text-align:center; color:white;"><p>Questionnaire</p>
+   <div class="jumbotron" style="font-size:40px; background-color: #ffe5ea; text-align:center; color:black;"><p>Questionnaire</p>
         </div>
         <?php
         ?>
@@ -170,21 +170,18 @@
                         </div>
                         </div>
                         </div>
-                        <button type="submit" class="btn btn-primary" style=" background-color: #809fff; color:white;" name="submit"> Submit</button>
+                        <br>
+                        <br>
+                        <center><button class="btn" style=" background-color:#e0e0e0;  height: 50px; width:100px;" type="submit" name="submit"> <font size=+2>Submit</font size></button></center>
+                        <!--<button type="submit" class="btn btn-primary" style=" background-color: #809fff; color:black;" name="submit"> Submit</button>-->
                         </form>
                         <br>
                         <br>
-                       
-
-                <!--<center><button class="btn" style=" background-color:#e0e0e0;  height: 50px; width:100px;" type="submit" name="submit"> <font size=+2>Submit</font size></button></center>-->
-                
                         <br>
                         <br>
                         <br>
                         <br>
-                        <br>
-                        <br>
-                        <div class="jumbotron footer" style="margin-bottom:0; background-color:#800000;text-align:center">
+                        <div class="jumbotron footer" style="margin-bottom:0; background-color:#ffe5ea;text-align:center">
                             <p style="text-align: Center"><center>©BdpaUnemploymentInc.</center></p>
                             <p style="text-align: Center"><center>Hours of Operation: 24/7 Monday-Sunday</center></p>
                             <p style="text-align: Center"><center>Phone Number: 1-240-XXX-XXXX</center></p>
