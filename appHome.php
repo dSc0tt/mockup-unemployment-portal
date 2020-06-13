@@ -57,7 +57,7 @@ include('db.php');
             <!--<h4><font size=+4><center>Best of luck to you!</center></font size></h4>-->
         <br>
         <br>
-          <center><button class="btn" onclick="window.location='appBewClaimGate.php'" style=" background-color:#e0e0e0;  height: 50px; width:200px;" type="submit" name="getStarted"> <font size=+2>File A Claim</font size></button></center>
+          <center><button class="btn" onclick="window.location='appNewClaimGate.php'" style=" background-color:#e0e0e0;  height: 50px; width:200px;" type="submit" name="getStarted"> <font size=+2>File A Claim</font size></button></center>
         <br>
         <br>
         <br>
