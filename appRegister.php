@@ -9,16 +9,6 @@ include("appProcessRegister.php");
 <html>
     <head>
     <style>
-        .jumbotron {
-            padding: 2rem 1rem;
-            margin-bottom: 2rem;
-            border-radius: 0.3rem;
-
-            background: #1a2a6c;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-        }
         #main {
                 height:500px;
         }
@@ -35,7 +25,7 @@ include("appProcessRegister.php");
     <body>
         <!-- Adds a navbar-->
         <?php include('guestNavbar.php');?>
-        <p class="jumbotron" style="font-size:40px; background-color: #809fff; text-align:center; color:white;">Register As New Applicant</p>    
+        <p class="jumbotron" style="font-size:40px; background-color:#ffe5ea; text-align:center; color:black;">Register As New Applicant</p>    
         <div class="container">
         <div class="row" id="main">
             <div class="col-md-1"></div>
@@ -134,5 +124,6 @@ include("appProcessRegister.php");
             <p style="text-align: Center"><center>©BdpaUnemploymentInc.</center></p>
             <p style="text-align: Center"><center>Hours of Operation: 24/7 Monday-Sunday</center></p>
             <p style="text-align: Center"><center>Phone Number: 1-240-XXX-XXXX</center></p>
-        </body>
+        </div>
+    </body>
 </html>

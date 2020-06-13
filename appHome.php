@@ -4,16 +4,6 @@ include('db.php');
 <html>
     <head>
     <style>
-      .jumbotron {
-        padding: 2rem 1rem;
-        margin-bottom: 2rem;
-        border-radius: 0.3rem;
-
-        background: #1a2a6c;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-      }
       #main {
             height:500px;
       }
@@ -31,7 +21,7 @@ include('db.php');
     <body>
     <?php include('appNavbar.php');?>
     <div class="">
-            <p class="jumbotron" style="font-size:60px; background-color: #cc0000; text-align:center; color:white;">BDPA Unemployment Inc.</p>
+            <p class="jumbotron" style="font-size:60px; background-color:#ffe5ea; text-align:center; color:black;">BDPA Unemployment Inc.</p>
             <!--<h1><center>Thank you for visiting ©BdpaUnemploymentInc.</center><h1>--> 
             <br>
             <h2> <b><center> Welcome, <?php echo $_SESSION['firstname']. " " .$_SESSION['lastname'] ?>!</center></b></h2> 
@@ -64,10 +54,10 @@ include('db.php');
         <br>
         <br>
   
-        <div class="jumbotron footer" style="margin-bottom:0; background-color: #cc0000;">
-        <p style="text-align: Center"><center>©BdpaUnemploymentInc.</center></p>
-        <p style="text-align: Center"><center>Hours of Operation: 24/7 Monday-Sunday</center></p>
-        <p style="text-align: Center"><center>Phone Number: 1-240-XXX-XXXX</center></p>
+        <div class="jumbotron footer" style="margin-bottom:0; background-color:#ffe5ea;text-align:center">
+            <p style="text-align: Center"><center>©BdpaUnemploymentInc.</center></p>
+            <p style="text-align: Center"><center>Hours of Operation: 24/7 Monday-Sunday</center></p>
+            <p style="text-align: Center"><center>Phone Number: 1-240-XXX-XXXX</center></p>
         </div>
        </div>
     </body>

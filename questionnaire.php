@@ -21,15 +21,13 @@
     </head>
     <body>
     <?php include('guestNavbar.php');?>
-    <div class="jumbotron" style="font-size:40px; background-color: #800000; text-align:center; color:white;"><p>Questionnaire</p>
-        </div>
+    <p class="jumbotron" style="font-size:40px; background-color:#ffe5ea; text-align:center; color:black;">Questionnaire</p>
         <div class="container">
           <div class="col-md-4"></div>
             <div class="col-md-14">
-            <!--<form method="POST">-->
                 <form method="POST" action="questionnaire_process.php">
-                    <center><h4><b>NOTICE:</b></h4></center>
-                    <center><p>By answering this questionnaire, you agree to answer truthfully and to the best of your ability. If our 
+                    <center><h4 style="color:#800000;"><b>NOTICE:</b></h4></center>
+                    <center><p style="color:#800000;">By answering this questionnaire, you agree to answer truthfully and to the best of your ability. If our 
                     unemployment admin find out you lied on this form, your claim will be immeditaley rejected and you will be unable to appeal.</p></center>
                         <p><b>_______________________________________________________________________________________________________________________________________________________________________</b></p>
                     <br>
@@ -135,7 +133,6 @@
                         <button class="btn col-md-3" style="background-color:#e0e0e0;  height: 50px; width:100px;" type="reset" value="Reset"><font size=+2>Reset</font></button>
                         <button class="btn col-md-3" style=" background-color:#e0e0e0;  height: 50px; width:100px;" type="submit" name="submit"> <font size=+2>Submit</font></button>
                     </center>
-                    <!--<button type="submit" class="btn btn-primary" style=" background-color: #809fff; color:black;" name="submit"> Submit</button>-->
                 </form>
             </div>
         </div>
@@ -149,7 +146,7 @@
                             <p style="text-align: Center"><center>©BdpaUnemploymentInc.</center></p>
                             <p style="text-align: Center"><center>Hours of Operation: 24/7 Monday-Sunday</center></p>
                             <p style="text-align: Center"><center>Phone Number: 1-240-XXX-XXXX</center></p>
-
+                        </div>
         
                         
             

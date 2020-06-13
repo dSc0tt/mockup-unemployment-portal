@@ -5,16 +5,6 @@
         #main {
               height:500px;
           }
-        .jumbotron {
-        padding: 2rem 1rem;
-        margin-bottom: 2rem;
-        border-radius: 0.3rem;
-
-        background: #1a2a6c;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-        }
         .hd1{
             color:#fff;
         }
@@ -31,7 +21,7 @@
     <?php include('guestNavbar.php');?>
     <body>
     
-    <p class="jumbotron" style="font-size:40px; background-color: #cc0000; text-align:center; color:white;">Admin Login</p>
+    <p class="jumbotron" style="font-size:40px; background-color:#ffe5ea; text-align:center; color:black;">Admin Login</p>
         <?php
           //processes login credentials and displays error message after the jumbotron
           include('adminProcessLogin.php'); 
@@ -50,15 +40,17 @@
                         <label for="Password">Password</label>
                         <input type="password" class="form-control" id="Password" name="pass" placeholder="Password">
                     </div>
-                    <button type="submit" class="btn btn-primary" style=" background-color: #809fff; color:white;" name="submit">Log In</button>
-                    <br><p>Haven't filed a claim yet? <a href="userRegister.php">Register here</a> to file your first claim.</br>Not an admin user? <a href="userLogin.php">Log in here</a> to log in as an applicant.</p>
+                    <button type="submit" class="btn" style=" background-color:#e0e0e0;  height: 50px; width:100px;" name="submit">Log In</button>
+                    <br><p>Haven't filed a claim yet? <a href="appRegister.php">Register here</a> to file your first claim.</br>Not an admin user? <a href="appLogin.php">Log in here</a> to log in as an applicant.</p>
                 </div>
                 </div>
                 </form>
             </div>
         </div>
-        <div class="jumbotron footer" style="margin-bottom:0; background-color: #809fff;">
-        <p> ©BdpaUnemploymentInc.</p>
+        <div class="jumbotron footer" style="margin-bottom:0; background-color:#ffe5ea;text-align:center">
+        <p style="text-align: Center; color: white;"><center>©BdpaUnemploymentInc.</center></p>
+        <p style="text-align: Center;"><center>Hours of Operation: 24/7 Monday-Sunday</center></p>
+        <p style="text-align: Center;"><center>Phone Number: 1-240-XXX-XXXX</center></p>
         </div>
        
     </body>

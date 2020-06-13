@@ -14,16 +14,6 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
         <style>
-            .jumbotron {
-            padding: 2rem 1rem;
-            margin-bottom: 2rem;
-            border-radius: 0.3rem;
-
-            background: #1a2a6c;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-            }
             .hd1{
                 color:#fff;
             }
@@ -32,7 +22,7 @@
     <body>
         <!-- Adds a navbar-->
         <?php include('guestNavbar.php');?>    
-        <p class="jumbotron" style="font-size:40px; background-color: #cc0000; text-align:center; color:white;">Log In</p>
+        <p class="jumbotron" style="font-size:40px; background-color:#ffe5ea; text-align:center; color:black;">Log In</p>
         <div class="container">
         <?php
         //after the jumbotron, display error messages
@@ -59,13 +49,13 @@
                 <br>
                 <button class="btn" style=" background-color:#e0e0e0;  height: 50px; width:100px;" name="submit" type="submit"> <font size=+2>Log In</font size></button>
                <br>
-                <br><p>Haven't filed a claim yet? <a href="userRegister.php">Register here</a> to file your first claim.</br> Admin user? <a href="adminLogin.php">Log in here</a> to manage pending applications.</p>
+                <br><p>Haven't filed a claim yet? <a href="appRegister.php">Register here</a> to file your first claim.</br> Admin user? <a href="adminLogin.php">Log in here</a> to manage pending applications.</p>
             </form>
             </div>
             <div class="mid-col-3"></div>
         </div>
         </div>
-        <div class="jumbotron footer" style="margin-bottom:0; background-color: #cc0000;">
+        <div class="jumbotron footer" style="margin-bottom:0; background-color:#ffe5ea;text-align:center">
         <p style="text-align: Center; color: white;"><center>©BdpaUnemploymentInc.</center></p>
         <p style="text-align: Center;"><center>Hours of Operation: 24/7 Monday-Sunday</center></p>
         <p style="text-align: Center;"><center>Phone Number: 1-240-XXX-XXXX</center></p>
