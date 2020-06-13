@@ -36,11 +36,8 @@ include("applicantProcessRegister.php");
                 <li class="nav-item">
                     <a class="nav-link" href="userLogin.php">Sign-In</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="userRegister.php">Make A Claim</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">View Your Claims</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="questionnaire.php">Register</a>
                 </li>
                 </ul>
             </div>
