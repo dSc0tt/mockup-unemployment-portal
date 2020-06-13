@@ -13,7 +13,6 @@ $uname = "";
 $gender = "";
 $dob = "";
 if(isset($_POST['submit'])){
-    echo('If the submit button works');
     $fname = $_POST['firstname'];
     $lname = $_POST['lastname'];
     $soc = $_POST['SSN1'].$_POST['SSN2'].$_POST['SSN3'];
@@ -76,7 +75,7 @@ if(isset($_POST['submit'])){
                 </button>
                   </div>';
     }
-    if($states == 'null')
+    if($state == 'null')
     {
         echo '<div class="alert alert-danger" role="alert">
         You must select a state.
@@ -132,7 +131,6 @@ if(isset($_POST['submit'])){
         }
         else
         {
-          echo("runs the query");
           //process information and insert it into database
 
           $query="INSERT INTO applicants(soc_sec_id, first_name, last_name, email, dob, address, city, state_id, zipcode, gender, username) 
@@ -147,7 +145,7 @@ if(isset($_POST['submit'])){
           $mysqli_stmt_bind_param ($preparedStatement, issssssisss, $social, $fname, $lname, $email, $dob, $address, $city, $state, $zip, $gender, $uname);
           mysqli_stmt_execute($preparedStatement);
           */
-          header('location:userLogin.php');
+          header('location:appLogin.php');
         }
     }
 }

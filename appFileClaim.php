@@ -21,21 +21,23 @@ include ("db.php");
     <body>
     <!-- Adds a navbar-->
     <?php include('appNavbar.php');?>
-   <div class="jumbotron" style="font-size:40px; background-color: #ffe5ea; text-align:center; color:black;"><p>File a Claim</p>
-        </div>
+    <p class="jumbotron" style="font-size:40px; background-color: #ffe5ea; text-align:center; color:black;">File a Claim</p>
+          <?php 
+          include("appProcessFileClaim.php");
+          ?>
           <center> <div class="col-md-2"></div>
             <div class="col-md-5">
-           <form method="POST">
+            <form method="POST">
                 <div class="form-group">
                     <h6>Your Information</h6>
                     <br>
                         <label for="Date of Employment">Last Date of Employment</label>
                         <div class="input-group">
-                            <input type="text" class="form-control col-md-3" id="MM" name="Date1" placeholder="MM">
+                            <input type="text" class="form-control col-md-3" id="MM" name="Month" placeholder="MM">
                             <div class="col-sm-1"><p>/</p></div>
-                            <input type="text" class="form-control col-md-3" id="DD" name="Date2" placeholder="DD">
+                            <input type="text" class="form-control col-md-3" id="DD" name="Day" placeholder="DD">
                             <div class="col-sm-1"></p>/</p></div>
-                            <input type="text" class="form-control col-md-3" id="YYYY" name="Date3" placeholder="YYYY">   
+                            <input type="text" class="form-control col-md-3" id="YYYY" name="Year" placeholder="YYYY">   
                         </div>
                         </div>
                         </div>
@@ -48,75 +50,72 @@ include ("db.php");
                 <br>
             <div class="col-md-3"></div>
             <div class="col-md-5">
-            <form method="POST">
+                <form method="POST">
                     <div class="form-group">
                         <h6>Information about Previous Employer</h6>
                         <br>
                         <label for="Name of Employer">Name</label>
                         <div class="input-group">
-                            <input type="text"class="form-control" id="Name" placeholder="Enter Name">
-                        <br>
-                        <br>
-                        <br>
-                            </div>
+                            <input type="text"class="form-control" id="Name" name="peName" placeholder="Enter Name">
+                            <br>
+                            <br>
+                            <br>
+                        </div>
                         <label for="Department">Department</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" id="Dept." placeholder="Enter Dept. Name">
+                            <input type="text" class="form-control" id="Dept." name="peDept" placeholder="Enter Dept. Name">
                         </div>
                         <br>
-                        
                         <label for="Address">Address</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" id="Address" placeholder="Enter Address">
+                            <input type="text" class="form-control" id="Address" name="peAddress" placeholder="Enter Address">
                         </div>
                         <br>               
-                <div class="form-group">
-                <label for="State">Select a State</label>
-                <?php
-                    $query = "SELECT * from states";
-                    $results= mysqli_query($conn,$query);
-                    $row= mysqli_fetch_assoc($results);
-                ?>
-                    <select class="form-control col-md-6" id="State" name="states" value="<?php echo $states ; ?>">
-                        <option value="null">Select A State</option>
-                        <?php while($row = mysqli_fetch_assoc($results))
-                        {
+                        <label for="State">Select a State</label>
+                        <?php
+                            $query = "SELECT * from states";
+                            $results= mysqli_query($conn,$query);
+                            $row= mysqli_fetch_assoc($results);
                         ?>
-                        <option value="<?php echo $row['id']; ?>"> <?php echo $row['name']; ?></option>
-                        <?php } ?>
-                    </select>
-                </div>
-            </div>
-            <br>
-                <center><label for="Zip Code">Zip Code</label>
+                        <select class="form-control col-md-6" id="State" name="states" value="<?php echo $states ; ?>">
+                            <option value="null">Select A State</option>
+                            <?php while($row = mysqli_fetch_assoc($results))
+                            {
+                            ?>
+                            <option value="<?php echo $row['id']; ?>"> <?php echo $row['name']; ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                    <br>
+                    <center><label for="Zip Code">Zip Code</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="Zip Code" name="peZipcode" placeholder="Enter Zip Code">
+                    </div></center>
+                    <br>
+                    <label for="City">City</label>
+                    <div class="input group">
+                        <input type="text" class="form-control" id="City" name="peCity" placeholder="Enter City">
+                    </div>
+                    <br>
+                    <label for="Email">Email</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="Email" name="peEmail" placeholder="Enter Email">
+                    </div>
+                    <br>
+                    <label for="Phone Number">Phone Number</label>
                 <div class="input-group">
-                            <input type="text" class="form-control" id="Zip Code" placeholder="Enter Zip Code">
-                </div></center>
-                <br>
-                <label for="City">City</label>
-                <div class="input group">
-                            <input type="text" class="form-control" id="City" placeholder="Enter City">
+                    <input type="text" class="form-control col-md-3" id="Phone Number1" maxlength="3" name="phoneNumber1" placeholder="###">
+                    <div class="col-sm-1"><p>-</p></div>
+                    <input type="text" class="form-control col-md-3" id="Phone Number2" maxlength="3" name="phoneNumber2" placeholder="###">
+                    <div class="col-sm-1"><p>-</p></div>
+                    <input type="text" class="form-control col-md-3" id="Phone Number3" maxlength="4" name="phoneNumber3" placeholder="####"> 
                 </div>
                 <br>
-                <label for="Email">Email</label>
-                <div class="input-group">
-                            <input type="text" class="form-control" id="Email" placeholder="Enter Email">
-                </div>
                 <br>
-                <center><label for="Phone Number">Phone Number</label>
-                <div class="input-group">
-                            <input type="text" class="form-control col-md-3" id="Phone Number1" name="Phone Number1" placeholder="XXX">
-                            <div class="col-sm-1"><p>-</p></div>
-                            <input type="text" class="form-control col-md-3" id="Phone Number2" name="Phone Number2" placeholder="XXX">
-                            <div class="col-sm-1"><p>-</p></div>
-                            <input type="text" class="form-control col-md-3" id="Phone Number3" name="Phone Number3" placeholder="XXXX">
-                             
-                </div></center>
-                
-               
+                <br>
+                <button type="submit" class="btn" style=" background-color:#e0e0e0;  height: 50px; width:100px;" name="submit">File Claim</button>
+            </form>
         </div>
-    </div>
-    </div>
 </center>
               <!--Laste date employment, employer name, dept, employer address, e state id, e zip code, e city, 
      e email, e phone #, salary-->   

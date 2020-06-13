@@ -4,7 +4,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse justify-content-between">
+                <ul class="navbar-nav ">
                     <li class="nav-item">
                         <a class="nav-link" href="appHome.php">Home <span class="sr-only">(current)</span></a>
                     </li>
@@ -14,8 +15,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="appInbox.php">Inbox</a>
                     </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                            <b><a class="nav-link" href="#"><?php echo $_SESSION['firstname']. " " .$_SESSION['lastname'] ?></a></b>
+                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="logout.php">Sign Out</a>
+                            <a class="nav-link" href="logout.php">Sign Out</a>
                     </li>
                 </ul>
             </div>
