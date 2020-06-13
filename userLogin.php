@@ -31,16 +31,11 @@
             .hd1{
                 color:#fff;
             }
-<<<<<<< HEAD
         </style>
     </head>
     <body>
         <?php include('guestNavbar.php');?>    
         <p class="jumbotron" style="font-size:40px; background-color: #cc0000; text-align:center; color:white;">Log In</p>
-=======
-</style>
-        <p class="jumbotron" style="font-size:40px; background-color: #ffe5ea; text-align:center; color:black;">Log In</p>
->>>>>>> 336233137ea27eb53a0b6cbcea436e5abb4d78a7
         <div class="container">
         <?php
         //after the jumbotron, display error messages
@@ -73,15 +68,10 @@
             <div class="mid-col-3"></div>
         </div>
         </div>
-<<<<<<< HEAD
         <div class="jumbotron footer" style="margin-bottom:0; background-color: #cc0000;">
-        <p style="text-align: Center color: white"><center>©BdpaUnemploymentInc.</center></p>
-=======
-        <div class="jumbotron footer" style="margin-bottom:0; background-color: #ffe5ea;">
-        <p style="text-align: Center"><center>©BdpaUnemploymentInc.</center></p>
->>>>>>> 336233137ea27eb53a0b6cbcea436e5abb4d78a7
-        <p style="text-align: Center"><center>Hours of Operation: 24/7 Monday-Sunday</center></p>
-        <p style="text-align: Center"><center>Phone Number: 1-240-XXX-XXXX</center></p>
+        <p style="text-align: Center; color: white;"><center>©BdpaUnemploymentInc.</center></p>
+        <p style="text-align: Center;"><center>Hours of Operation: 24/7 Monday-Sunday</center></p>
+        <p style="text-align: Center;"><center>Phone Number: 1-240-XXX-XXXX</center></p>
 
         </div>
     </body>

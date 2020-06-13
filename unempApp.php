@@ -19,22 +19,7 @@ include ("db.php");
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     </head>
     <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
-    <a class="navbar-brand" href="#"><img src="Images\bdpa_jobless_pic.png" alt="BDPA LOGO" width="300px" height="80px"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="welcome.php">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="userLogin.php">Inbox</a>
-            </li>
-            </ul>
-        </div>
-        </nav>
+    
    <div class="jumbotron" style="font-size:40px; background-color: #ffe5ea; text-align:center; color:black;"><p>File a Claim</p>
         </div>
      <!-- <div class="row" id="main">-->
