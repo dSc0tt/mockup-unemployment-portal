@@ -16,7 +16,13 @@ if(isset($_POST['submit']))
         header('location:viewClaims.php');
     }
     else {
-        echo 'Invalid Login Credentials';
+        echo '<div class="alert alert-danger" role="alert">
+        Invalid Login Credentials
+          <!--Close button on alert-->
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+                </button>
+                  </div>';
     }
 
 }

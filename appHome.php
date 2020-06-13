@@ -1,11 +1,22 @@
 <?php
+include('db.php');
 ?>
 <html>
     <head>
     <style>
+      .jumbotron {
+        padding: 2rem 1rem;
+        margin-bottom: 2rem;
+        border-radius: 0.3rem;
+
+        background: #1a2a6c;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      }
       #main {
             height:500px;
-        }
+      }
     </style>
         <title>Homepage</title>
         <img src link >
@@ -18,12 +29,12 @@
 <script src="https://stackpasth.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     </head>
     <body>
-    <?php include('guestNavbar.php');?>
+    <?php include('appNavbar.php');?>
     <div class="">
             <p class="jumbotron" style="font-size:60px; background-color: #cc0000; text-align:center; color:white;">BDPA Unemployment Inc.</p>
             <!--<h1><center>Thank you for visiting ©BdpaUnemploymentInc.</center><h1>--> 
             <br>
-            <h2> <b><center> COVID-19 UPDATE AND INSTRUCTIONS:</center></b></h2> 
+            <h2> <b><center> Welcome, <?php echo $_SESSION['firstname']. " " .$_SESSION['lastname'] ?>!</center></b></h2> 
             <br>
            <div class="col-mid-3"></div>
             <div class = "container">
@@ -46,7 +57,7 @@
             <!--<h4><font size=+4><center>Best of luck to you!</center></font size></h4>-->
         <br>
         <br>
-          <center><button class="btn" onclick="window.location='questionnaire.php'" style=" background-color:#e0e0e0;  height: 50px; width:200px;" type="submit" name="getStarted"> <font size=+2>Get Started</font size></button></center>
+          <center><button class="btn" onclick="window.location='appBewClaimGate.php'" style=" background-color:#e0e0e0;  height: 50px; width:200px;" type="submit" name="getStarted"> <font size=+2>File A Claim</font size></button></center>
         <br>
         <br>
         <br>

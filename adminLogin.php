@@ -1,7 +1,3 @@
-<?php
-//Admin login for unemployment portal
-include("adminProcessLogin.php");
-?>
 <html>
     <head>
       <!-- CSS only -->
@@ -36,6 +32,10 @@ include("adminProcessLogin.php");
     <body>
     
     <p class="jumbotron" style="font-size:40px; background-color: #cc0000; text-align:center; color:white;">Admin Login</p>
+        <?php
+          //processes login credentials and displays error message after the jumbotron
+          include('adminProcessLogin.php'); 
+        ?>
         <div class="container">
             <div class="row" id="main">
                 <div class="col-md-3"></div>

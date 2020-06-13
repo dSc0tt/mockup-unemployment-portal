@@ -1,8 +1,5 @@
 <?php
 include('db.php');
-
-
-
 //pre - define variables
 $fname = "" ;
 $lname = ""; 
@@ -10,25 +7,22 @@ $soc = "" ;
 $email = "";
 $address = "";
 $city = "";
-$states = "";
+$state = "";
 $zip = "";
-$pass = "";
-$passC = "";
+$uname = "";
 $gender = "";
 $dob = "";
-//pre - define states table
-
 if(isset($_POST['submit'])){
+    echo('If the submit button works');
     $fname = $_POST['firstname'];
     $lname = $_POST['lastname'];
     $soc = $_POST['SSN1'].$_POST['SSN2'].$_POST['SSN3'];
     $email = $_POST['email'];
     $address = $_POST['address'];
     $city = $_POST['city'];
-    $states = $_POST['states'];
+    $state = $_POST['states'];
     $zip = $_POST['zipcode'];
-    $pass = $_POST['pass'];
-    $passC = $_POST['cPass'];
+    $uname = $_POST['username'];
     $gender = $_POST['gender'];
     $dob = $_POST['Year']. '-' .$_POST['Month']. '-' .$_POST['Day'];
     //check if fields are empty
@@ -92,31 +86,20 @@ if(isset($_POST['submit'])){
                 </button>
                   </div>';
     }
+    if($uname == '')
+    {
+        echo '<div class="alert alert-danger" role="alert">
+        You must enter a username.
+          <!--Close button on alert-->
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+                </button>
+                  </div>';
+    }
     if($gender == 'null')
     {
-        '<div class="alert alert-danger" role="alert">
+        echo '<div class="alert alert-danger" role="alert">
         You must select a gender.
-          <!--Close button on alert-->
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-                </button>
-                  </div>';
-    }
-    if($pass || $passC == '')
-    {
-        '<div class="alert alert-danger" role="alert">
-        You must provide a password for both fields.
-          <!--Close button on alert-->
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-                </button>
-                  </div>';
-    }
-    //validate password
-    //check if password fields match
-    if($pass != $passC){
-        '<div class="alert alert-danger" role="alert">
-        Passwords do not match.
           <!--Close button on alert-->
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -126,8 +109,8 @@ if(isset($_POST['submit'])){
     //validate social security number
     if(!is_numeric($soc))
     {
-        '<div class="alert alert-danger" role="alert">
-        Please enter a valid social security number.
+      echo '<div class="alert alert-danger" role="alert">
+        Please Enter a numeric SSN
           <!--Close button on alert-->
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -139,7 +122,7 @@ if(isset($_POST['submit'])){
         $social_range = range(577,579);
         if(!in_array($substr_soc, $social_range))
         {
-            '<div class="alert alert-danger" role="alert">
+          echo '<div class="alert alert-danger" role="alert">
             Please enter a valid social security number.
             <!--Close button on alert-->
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -149,20 +132,22 @@ if(isset($_POST['submit'])){
         }
         else
         {
-            //process information and insert it into database
+          echo("runs the query");
+          //process information and insert it into database
 
-            //$query="INSERT INTO applicants(soc_sec_id, first_name, last_name, email, dob, address, city, state_id, zipcode, gender, password) 
-            //VALUES($social, '$fname', '$email', '$dob', '$address', '$city', '$state', '$zip', '$gender', '$pass')";
-            //$result = mysqli_query($conn, $query);
+          $query="INSERT INTO applicants(soc_sec_id, first_name, last_name, email, dob, address, city, state_id, zipcode, gender, username) 
+          VALUES('$soc', '$fname', '$lname', '$email', '$dob', '$address', '$city', '$state', '$zip', '$gender', '$uname')";
+          $result = mysqli_query($conn, $query);
 
-            //Second, more secure, more abstract method (prevents sql injection)
-            $query="INSERT INTO applicants(soc_sec_id, first_name, last_name, email, dob, address, city, state_id, zipcode, gender, password)
-            VALUES(?,?,?,?,?,?,?,?,?,?,?)";
-            $preparedstatement = myslqi_prepare($conn,$query);
-            $mysqli_stmt_bind_param ($preparedStatement, issssssisss, $social, $fname, $email, $dob, $address, $city, $state, $zip, $gender, $pass);
-            mysqli_stmt_execute($preparedStatement);
-
-            header('location:userLogin.php');
+          //Second, more secure, more abstract method (prevents sql injection)
+          /*
+          $query="INSERT INTO applicants(soc_sec_id, first_name, last_name, email, dob, address, city, state_id, zipcode, gender, username)
+          VALUES(?,?,?,?,?,?,?,?,?,?,?)";
+          $preparedstatement = myslqi_prepare($conn,$query);
+          $mysqli_stmt_bind_param ($preparedStatement, issssssisss, $social, $fname, $lname, $email, $dob, $address, $city, $state, $zip, $gender, $uname);
+          mysqli_stmt_execute($preparedStatement);
+          */
+          header('location:userLogin.php');
         }
     }
 }

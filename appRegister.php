@@ -1,6 +1,6 @@
 <?php
 //User registration form for unemployment portal
-include("applicantProcessRegister.php");
+include("appProcessRegister.php");
 //include('db.php');
 ?>
 <?php
@@ -9,8 +9,18 @@ include("applicantProcessRegister.php");
 <html>
     <head>
     <style>
-      #main {
-            height:500px;
+        .jumbotron {
+            padding: 2rem 1rem;
+            margin-bottom: 2rem;
+            border-radius: 0.3rem;
+
+            background: #1a2a6c;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+        #main {
+                height:500px;
         }
     </style>
         <title>Bootstrap</title>
@@ -23,25 +33,8 @@ include("applicantProcessRegister.php");
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
-            <a class="navbar-brand" href="#">Helping Hand</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="welcome.php">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="userLogin.php">Sign-In</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="questionnaire.php">Register</a>
-                </li>
-                </ul>
-            </div>
-        </nav>
+        <!-- Adds a navbar-->
+        <?php include('guestNavbar.php');?>
         <p class="jumbotron" style="font-size:40px; background-color: #809fff; text-align:center; color:white;">Register As New Applicant</p>    
         <div class="container">
         <div class="row" id="main">
@@ -50,27 +43,40 @@ include("applicantProcessRegister.php");
             <form method="POST">
             <div class="input-group">
                 <div class="form-group">
-                    <label for="fName">First Name:</label>
+                    <label for="fName">First Name</label>
                     <input type="text" class="form-control col-md-10" id="fName" name="firstname" placeholder="Enter First Name" value="<?php echo $fname ; ?>">
                     <div class="invalid-feedback">
                         Please provide a valid city.
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="lName">Last Name:</label>
+                    <label for="lName">Last Name</label>
                     <input type="text" class="form-control col-md-10" id="f\lName" name="lastname" placeholder="Enter LastName" value="<?php echo $lname ; ?>">
                 </div>
                 <div class="form-group">
-                    <label for="Password">Password</label>
-                    <input type="password" class="form-control col-md-10" id="Password" name="pass" placeholder="" value="">
-                </div>
-                <div class="form-group">
-                    <label for="Password">Confirm Password</label>
-                    <input type="password" class="form-control col-md-10" id="cPassword" name="cPass" placeholder="" value="">
+                    <label for="Username">Username</label>
+                    <input type="password" class="form-control col-md-10" id="Username" name="username" placeholder="johndoe123" value="<?php echo $uname ; ?>">
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" class="form-control col-md-10" id="email" name="email" placeholder="janedoe@email.org" value="<?php echo $email ; ?>">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="Gender">Select a Gender</label>
+                    <select class="form-control col-md-12" id="Gender" name="gender">
+                        <option value="null">Select A Gender</option>
+                        <option value="F">Female</option>
+                        <option value="M">Male</option>
+                        <option value="O">Non-Binary</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="DOB">D.O.B</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control col-md-2" id="DOBM" maxlength="2" name="Month" placeholder="MM">
+                        <input type="text" class="form-control col-md-2" id="DOBD" maxlength="2" name="Day" placeholder="DD">
+                        <input type="text" class="form-control col-md-2" id="DOBY" maxlength="4" name="Year" placeholder="YYYY">
+                    </div>
                 </div>
             </div>
             <div class="input-group">
@@ -113,24 +119,6 @@ include("applicantProcessRegister.php");
                             <input type="password" class="form-control" id="SSN3" maxlength="4" name="SSN3" placeholder="SSN">
                         </div>
                     </div>
-                <!--</div>
-                <div class="form-group">-->
-                    <label for="Gender">Select a Gender</label>
-                    <select class="form-control col-md-6" id="Gender" name="gender">
-                        <option value="null">Select A Gender</option>
-                        <option value="Female">Female</option>
-                        <option value="Male">Male</option>
-                        <option value="Male">Non-Binary</option>
-                    </select>
-                    <!-- too tired to include the state row. Its kinda confusing -->
-                </div>
-                <div class="form-group">
-                    <label for="DOB">D.O.B</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control col-md-2" id="DOBM" maxlength="" name="Month" placeholder="MM">
-                        <input type="text" class="form-control col-md-2" id="DOBD" name="Day" placeholder="DD">
-                        <input type="text" class="form-control col-md-2" id="DOBY" name="Year" placeholder="YY">
-                    </div>
                 </div>
             <!--</div>-->
             <button type="submit" class="btn btn-primary" style=" background-color: #809fff; color:white;" name="submit">Register</button>   
@@ -139,9 +127,12 @@ include("applicantProcessRegister.php");
         </div>
         <div class="col-md-1"></div>
         </div>
-      <!--  <div class="jumbotron footer" style="margin-bottom:0; background-color: #809fff;">
-        <p>This is the bottom of the page</p>
-        </div> -->
-       
-    </body>
+        <br>
+        <br>
+        <br>
+        <div class="jumbotron footer" style="margin-bottom:0; background-color:#ffe5ea;text-align:center">
+            <p style="text-align: Center"><center>©BdpaUnemploymentInc.</center></p>
+            <p style="text-align: Center"><center>Hours of Operation: 24/7 Monday-Sunday</center></p>
+            <p style="text-align: Center"><center>Phone Number: 1-240-XXX-XXXX</center></p>
+        </body>
 </html>

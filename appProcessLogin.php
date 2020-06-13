@@ -9,10 +9,10 @@ if(isset($_POST['submit']))
     $row= mysqli_fetch_assoc($result);
     $count= mysqli_num_rows($result);
     if($count>0) {
-        session_start();
         $_SESSION['firstname']= $row['first_name'];
         $_SESSION['lastname']= $row['last_name'];
-        header('location:viewClaims.php');
+        $_SESSION['ssn']= $row['soc_sec_id'];
+        header('location:appHome.php');
     }
     else {
         echo '<div class="alert alert-danger" role="alert">

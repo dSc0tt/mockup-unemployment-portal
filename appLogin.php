@@ -1,7 +1,3 @@
-<?php
-//This is the login page for basic users of the unemployment portal
-//require("applicantProcessLogin.php");
-?>
 <html>
     <head>
     <style>
@@ -34,12 +30,13 @@
         </style>
     </head>
     <body>
+        <!-- Adds a navbar-->
         <?php include('guestNavbar.php');?>    
         <p class="jumbotron" style="font-size:40px; background-color: #cc0000; text-align:center; color:white;">Log In</p>
         <div class="container">
         <?php
         //after the jumbotron, display error messages
-        require("applicantProcessLogin.php");
+        require("appProcessLogin.php");
         ?>
         <div class="row" id="main">
             <div class="col-md-3"></div>
