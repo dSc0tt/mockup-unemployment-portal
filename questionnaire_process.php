@@ -20,6 +20,7 @@ if($Applying == 'null')
               <span aria-hidden="true">&times;</span>
                 </button>
                   </div>';
+                  header('location:cant_file_claim.php');
     }
 if($Relocate == 'null')
     {
@@ -30,6 +31,7 @@ if($Relocate == 'null')
               <span aria-hidden="true">&times;</span>
                 </button>
          </div>';
+         header('location:cant_file_claim.php');
     }
 if($RegularC == 'null')
     {
@@ -40,6 +42,7 @@ if($RegularC == 'null')
             <span aria-hidden="true">&times;</span>
                 </button>
         </div>';
+        header('location:cant_file_claim.php');
     }
 if($ContinueC == 'null')
     {
@@ -50,6 +53,7 @@ if($ContinueC == 'null')
             <span aria-hidden="true">&times;</span>
                 </button>
         </div>';
+        header('location:cant_file_claim.php');
     }
 if($WorkedS == 'null')
     {
@@ -60,6 +64,7 @@ if($WorkedS == 'null')
             <span aria-hidden="true">&times;</span>
                 </button>
         </div>';
+        header('location:cant_file_claim.php');
     }
 if($DeniedJ == 'null')
     {
@@ -70,6 +75,7 @@ if($DeniedJ == 'null')
             <span aria-hidden="true">&times;</span>
                 </button>
         </div>';
+        header('location:cant_file_claim.php');
     }
 if($MultipleQ == 'null')
     {
@@ -80,28 +86,29 @@ if($MultipleQ == 'null')
             <span aria-hidden="true">&times;</span>
                 </button>
         </div>';
+        header('location:cant_file_claim.php');
         }
-        if($Applying == 'No')
+        if($Applying !== 'Yes')
             {
-                header('location:cant_file_claim.php')
+                header('location:cant_file_claim.php');
             }
-        if($Relocate == 'Yes'){
-            header('location:cant_file_claim.php')
+        if($Relocate !== 'No'){
+            header('location:cant_file_claim.php');
         }
-        if($RegularC == 'No'){
-            header('location:cant_file_claim.php')
+        if($RegularC !== 'Yes'){
+            header('location:cant_file_claim.php');
         }
-        if($ContinueC == 'No'){
-            header('location:cant_file_claim.php')
+        if($ContinueC !== 'Yes'){
+            header('location:cant_file_claim.php');
         }
-        if($WorkedS == 'Yes'){
-            header('location:cant_file_claim.php')
+        if($WorkedS !== 'No'){
+            header('location:cant_file_claim.php');
         }
-        if($DeniedJ == 'Yes'){
-            header('location:cant_file_claim.php')
+        if($DeniedJ !== 'No'){
+            header('location:cant_file_claim.php');
         }
-        if($MultipleQ == 'Yes'){
-            header('location:cant_file_claim.php')
+        if($MultipleQ !== 'No'){
+            header('location:cant_file_claim.php');
         }
         else{
             header('location: claims_official_official.php');

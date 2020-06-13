@@ -170,13 +170,14 @@
                         </div>
                         </div>
                         </div>
+                        <button type="submit" class="btn btn-primary" style=" background-color: #809fff; color:white;" name="submit"> Submit</button>
                         </form>
                         <br>
                         <br>
                        
 
                 <!--<center><button class="btn" style=" background-color:#e0e0e0;  height: 50px; width:100px;" type="submit" name="submit"> <font size=+2>Submit</font size></button></center>-->
-                <button type="submit" class="btn btn-primary" style=" background-color: #809fff; color:white;" name="submit"></button>
+                
                         <br>
                         <br>
                         <br>
