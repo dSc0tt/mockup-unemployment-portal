@@ -55,6 +55,16 @@ if(isset($_POST['submit'])){
                 </button>
                   </div>';
     }
+    if($dob == '')
+    {
+        echo '<div class="alert alert-danger" role="alert">
+        You must enter your date of birth.
+          <!--Close button on alert-->
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+                </button>
+                  </div>';
+    }
     if($email == '')
     {
         echo '<div class="alert alert-danger" role="alert">
