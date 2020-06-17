@@ -38,12 +38,10 @@
                         <label for="Q1">Are you applying for unemployment due to acts of COVID-19?</label>
                         <div class="input-group">
                             <label for="option1" class="radio-inline col-md-4">
-                            <input type="radio" id="Yes" name="Applying" value="Yes">
-                            Yes</label>
+                            <input type="radio" id="Yes" name="Applying" value="Yes">Yes</label>
                             
                             <label for="option2" class="radio-inline col-md-4">
-                            <input type="radio" id="No" name="Applying" value="No">
-                            No</label>
+                            <input type="radio" id="No" name="Applying" value="No">No</label>
                         </div>
                     </div>
             
@@ -114,8 +112,8 @@
                         <br>
                         <div class="input-group">
                             <ul>
-                            <li> I quit my job just to collect unemployment benefits.</li>
-                            <li> I am currently receiving vacation leave, sick leave, or paid time off.</li>
+                            <li>I quit my job just to collect unemployment benefits.</li>
+                            <li>I am currently receiving vacation leave, sick leave, or paid time off.</li>
                             <li>I can work from home but am choosing not to.</li>
                             </ul>
                             <br>
