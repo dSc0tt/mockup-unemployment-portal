@@ -111,10 +111,21 @@ include("appProcessRegister.php");
                     </div>
                 </div>
             <!--</div>-->
+            <br>
+            <br>
             <button type="submit" class="btn btn-primary" style=" background-color: #809fff; color:white;" name="submit">Register</button>   
+            <br>
             <br><p>Already filed a claim? <a href="userLogin.php">Log in here</a> to check its status or file an appeal.</br></p>
             </div>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="col-md-1"></div>
         </div>
         <br>
