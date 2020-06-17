@@ -45,7 +45,7 @@ include("appProcessRegister.php");
                 </div>
                 <div class="form-group">
                     <label for="Username">Username</label>
-                    <input type="password" class="form-control col-md-10" id="Username" name="username" placeholder="johndoe123" value="<?php echo $uname ; ?>">
+                    <input type="text" class="form-control col-md-10" id="Username" name="username" placeholder="johndoe123" value="<?php echo $uname ; ?>">
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>

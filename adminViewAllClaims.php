@@ -33,7 +33,7 @@ $result=mysqli_query($conn,$query);
              <tr>
                 <td ><?php echo $row["first_name"]. " " .$row["last_name"];?></td>
                 <td ><?php echo $row["employer_name"];?></td>
-                <td ><?php if($row["application_status"]='P'){ echo 'Pending';}?></td>
+                <td ><?php if($row["application_status"]='P'){ echo 'Pending ';}?></td>
                 <td><button type="submit" class="btn" style=" background-color:#e0e0e0;  height: 50px; width:100px;" onclick="location.href='adminViewSpecificClaim.php?ssn=<?php echo $row['applicant_soc_sec']; ?>'" name="view">View Claim</button></td>
             </tr>
                 <?php }?>
