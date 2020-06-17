@@ -29,7 +29,8 @@
                     <center><h4 style="color:#800000;"><b>NOTICE:</b></h4></center>
                     <center><p style="color:#800000;">By answering this questionnaire, you agree to answer truthfully and to the best of your ability. If our 
                     unemployment admin find out you lied on this form, your claim will be immeditaley rejected and you will be unable to appeal.</p></center>
-                        <p><b>_______________________________________________________________________________________________________________________________________________________________________</b></p>
+                    <p><b>_______________________________________________________________________________________________________________________________________________________________________</b></p>
+                    <hr style="color:#800000;">
                     <br>
                     <div class="form-group">
                         <h5>Question 1</h5>

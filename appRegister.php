@@ -13,7 +13,7 @@ include("appProcessRegister.php");
                 height:500px;
         }
     </style>
-        <title>Bootstrap</title>
+        <title>Register</title>
         <!-- CSS only -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -55,17 +55,35 @@ include("appProcessRegister.php");
                     <label for="Gender">Select a Gender</label>
                     <select class="form-control col-md-12" id="Gender" name="gender">
                         <option value="null">Select A Gender</option>
-                        <option value="F">Female</option>
-                        <option value="M">Male</option>
-                        <option value="O">Non-Binary</option>
+                        <option value="F" <?php if($gender=='F'){echo "selected";}?>>Female</option>
+                        <option value="M" <?php if($gender=='M'){echo "selected";}?>>Male</option>
+                        <option value="O" <?php if($gender=='O'){echo "selected";}?>>Non-Binary</option>
                     </select>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="DOB">D.O.B</label>
                     <div class="input-group">
-                        <input type="text" class="form-control col-md-2" id="DOBM" maxlength="2" name="Month" placeholder="MM">
+                        <!--<input type="text" class="form-control col-md-2" id="DOBM" maxlength="2" name="Month" placeholder="MM">
                         <input type="text" class="form-control col-md-2" id="DOBD" maxlength="2" name="Day" placeholder="DD">
-                        <input type="text" class="form-control col-md-2" id="DOBY" maxlength="4" name="Year" placeholder="YYYY">
+                        <input type="text" class="form-control col-md-2" id="DOBY" maxlength="4" name="Year" placeholder="YYYY">-->
+                        <select name="Month" class="form-control">
+                            <option value="null">MM</option>
+                            <?php for($i = 1; $i <= 12; $i++){ ?>
+                                <option value="<?php echo $i; ?>" <?php if($_POST['Month']==$i){echo 'selected';}?>><?php echo $i; ?></option>
+                            <?php } ?>
+                        </select>
+                        <select name="Day" class="form-control">
+                            <option value="null">DD</option>
+                            <?php for($i = 1; $i <= 31; $i++){ ?>
+                                <option value="<?php echo $i; ?>" <?php if($_POST['Day']==$i){echo 'selected';}?>><?php echo $i; ?></option>
+                            <?php } ?>
+                        </select>
+                        <select name="Year" class="form-control">
+                            <option value="null">YYYY</option>
+                            <?php for($i = date('Y'); $i >= date('Y', strtotime('-100 years')); $i--){ ?>
+                                <option value="<?php echo $i; ?>" <?php if($_POST['Year']==$i){echo 'selected';}?>><?php echo $i; ?></option>
+                               <?php } ?>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -94,7 +112,7 @@ include("appProcessRegister.php");
                         <?php while($row = mysqli_fetch_assoc($results))
                         {
                         ?>
-                        <option value="<?php echo $row['id']; ?>"> <?php echo $row['name']; ?></option>
+                        <option value="<?php echo $row['id']; ?>" <?php if($state==$row['id']){echo "selected";}?>> <?php echo $row['name']; ?></option>
                         <?php } ?>
                     </select>
                 </div>

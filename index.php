@@ -2,30 +2,29 @@
 ?>
 <html>
     <head>
-    <style>
-      #main {
-            height:500px;
-        }
-    </style>
-        <title>Welcome to BdpaUnemploymentInc.!</title>
-        <img src link >
-        <!-- CSS only -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-<!-- JS, Popper.js, and jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpasth.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+      <style>
+        #main {
+              height:500px;
+          }
+      </style>
+      <title>Welcome to BdpaUnemploymentInc.!</title>
+      <img src link >
+      <!-- CSS only -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      <!-- JS, Popper.js, and jQuery -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpasth.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     </head>
     <body>
-    <?php include('guestNavbar.php');?>
-    <div class="">
-            <p class="jumbotron" style="font-size:40px; background-color: #ffe5ea; text-align:center; color:black;">BDPA Unemployment Inc.</p>
-            <!--<h1><center>Thank you for visiting ©BdpaUnemploymentInc.</center><h1>--> 
-            <br>
-            <h2> <b><center> COVID-19 UPDATE AND INSTRUCTIONS:</center></b></h2> 
-            <br>
-           <div class="col-mid-3"></div>
+      <?php include('guestNavbar.php');?>
+      <div class="">
+        <p class="jumbotron" style="font-size:40px; background-color: #ffe5ea; text-align:center; color:black;">BDPA Unemployment Inc.</p>
+        <!--<h1><center>Thank you for visiting ©BdpaUnemploymentInc.</center><h1>--> 
+        <br>
+        <h2> <b><center> COVID-19 UPDATE AND INSTRUCTIONS:</center></b></h2> 
+        <br>
+        <div class="col-mid-3"></div>
             <div class = "container">
             <p><font size=+2><center>In light of recent events, BDPA Unemployment has updated its
             platform for DC residents to file for unemployment. New users

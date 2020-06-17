@@ -23,7 +23,7 @@ if(isset($_POST['submit'])){
     $peCity = $_POST['peCity'];
     $peEmail = $_POST['peEmail'];
     $pePhone = $_POST['phoneNumber1']. '-' .$_POST['phoneNumber2']. '-' .$_POST['phoneNumber3'];
-    $snn = $_SESSION['ssn'];
+    $snn = $_SESSION['soc_sec_id'];
     $admin = "1";
     //check if fields are empty
     if($doe == '')
