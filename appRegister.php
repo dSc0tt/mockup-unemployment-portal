@@ -69,19 +69,19 @@ include("appProcessRegister.php");
                         <select name="Month" class="form-control">
                             <option value="null">MM</option>
                             <?php for($i = 1; $i <= 12; $i++){ ?>
-                                <option value="<?php echo $i; ?>" <?php if($_POST['Month']==$i){echo 'selected';}?>><?php echo $i; ?></option>
+                                <option value="<?php echo $i; ?>" <?php if($month==$i){echo 'selected';}?>><?php echo $i; ?></option>
                             <?php } ?>
                         </select>
                         <select name="Day" class="form-control">
                             <option value="null">DD</option>
                             <?php for($i = 1; $i <= 31; $i++){ ?>
-                                <option value="<?php echo $i; ?>" <?php if($_POST['Day']==$i){echo 'selected';}?>><?php echo $i; ?></option>
+                                <option value="<?php echo $i; ?>" <?php if($day==$i){echo 'selected';}?>><?php echo $i; ?></option>
                             <?php } ?>
                         </select>
                         <select name="Year" class="form-control">
                             <option value="null">YYYY</option>
                             <?php for($i = date('Y'); $i >= date('Y', strtotime('-100 years')); $i--){ ?>
-                                <option value="<?php echo $i; ?>" <?php if($_POST['Year']==$i){echo 'selected';}?>><?php echo $i; ?></option>
+                                <option value="<?php echo $i; ?>" <?php if($year==$i){echo 'selected';}?>><?php echo $i; ?></option>
                                <?php } ?>
                         </select>
                     </div>

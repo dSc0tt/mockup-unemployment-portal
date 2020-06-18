@@ -4,6 +4,8 @@
 // Set variable of all needed information grabbbed. 
 //This page will not be like a display page because there is no data repating itself. 
 //All you need to do is grab information from database, set variables for the information that you grab, then echo the information.
+//UPDATE CLAIMS TABLE AND UPDATE APPLICATION STATUS TO EITHER APPROVED
+
 ?>
 <html>
     <head>
@@ -45,7 +47,7 @@
     </nav>
     <body>
     
-        <p class="jumbotron" style="font-size:40px; background-color:#ffe5ea; text-align:center; color:black;">*PUT Name of Claim Person Here* <!-- <php echo $fullname>--></p>
+        <p class="jumbotron" style="font-size:40px; background-color:#ffe5ea; text-align:center; color:black;">*Put Name of Claim Person Here* <!-- <php echo $fullname>--></p>
         <div class="container">
             <div class="row" id="main">
                 <div class="col-md-2"></div>
@@ -73,8 +75,8 @@
                 </tr>
                 <tr>
                     <td>
-                        <button class="btn btn-success" name="approveButton"><a href="adminApprove.php?IdVariableName='<?php //echo Claim or User ID ?>'" style="color:white;">Approve Claim </a> </button>
-                        <button class="btn btn-danger" style="color:white;" name="denyButton"><a href="adminDeny.php?IdVariableName='<?php// echo Claim or User ID ?>'" style="color:white;">Deny Claim</a></button>
+                        <button class="btn btn-success" name="approve"><a href="adminApprove.php?IdVariableName='<?php //echo Claim or User ID ?>'" style="color:white;">Approve Claim </a> </button>
+                        <button class="btn btn-danger" style="color:white;" name="deny"><a href="adminDeny.php?IdVariableName='<?php// echo Claim or User ID ?>'" style="color:white;">Deny Claim</a></button>
                         <!-- Redirects to printer friendly page (No Styling) and automatically opens up print function -->
                         <button class="btn btn-primary" style=" background-color: #809fff; color:white;" name="printButton"><a href="adminViewSpecificClaimPrint.php?" style="color:white;">Print Page</a></button>
 
@@ -91,6 +93,25 @@
               <p style="text-align: Center"><center>Hours of Operation: 24/7 Monday-Sunday</center></p>
               <p style="text-align: Center"><center>Phone Number: 1-240-XXX-XXXX</center></p>
             </div>
+            
+            <?php 
+            include('adminNavbar.php');
+            include('db.php');
+
+              <p class="jumbotron" style="font-size:40px; background-color: #ffe5ea; text-align:center; color:black;">Admin View Specific Claim</p>
+              <br><br><br><br>
+              
+              
+              //UPDATE CLAIMS TABLE AND UPDATE APPLICATION STATUS TO EITHER APPROVED  
+              if(isset($POST['approve'])){
+                $sql = "UPDATE claims SET application_status='Approved' WHERE applicant_soc_sec = "
+              }
+
+              if(isset($POST['deny'])){
+                $sql = "UPDATE"
+              }
+
+            ?>
        </div>
     </body>
 </html>

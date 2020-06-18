@@ -1,6 +1,9 @@
 <?php
 include('db.php');
 //pre - define variables
+$day="";
+$month="";
+$year="";
 $fname = "" ;
 $lname = ""; 
 $soc = "" ;
@@ -24,7 +27,10 @@ if(isset($_POST['submit'])){
     $zip = $_POST['zipcode'];
     $uname = $_POST['username'];
     $gender = $_POST['gender'];
-    $dob = $_POST['Year']. '-' .$_POST['Month']. '-' .$_POST['Day'];
+    $day=$_POST['Day'];
+    $month=$_POST['Month'];
+    $year=$_POST['Year'];
+    $dob = $year. '-' .$month. '-' .$day;
     //check if fields are empty
     if($fname == '')
     {
