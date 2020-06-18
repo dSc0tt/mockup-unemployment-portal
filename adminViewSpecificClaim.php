@@ -5,7 +5,10 @@
 //This page will not be like a display page because there is no data repating itself. 
 //All you need to do is grab information from database, set variables for the information that you grab, then echo the information.
 //UPDATE CLAIMS TABLE AND UPDATE APPLICATION STATUS TO EITHER APPROVED
-
+include_once('db.php');
+$adminID=$_SESSION['adminID'];
+$query= "SELECT a.first_name, a.last_name, c.application_status, c.employer_name, c.claim_id, c.applicant_soc_sec  FROM applicants AS a INNER JOIN claims AS c ON a.soc_sec_id= c.applicant_soc_sec AND c.admin_id='$adminID' AND c.open = 'Y'";
+$result=mysqli_query($conn,$query);
 ?>
 <html>
     <head>
@@ -75,11 +78,12 @@
                 </tr>
                 <tr>
                     <td>
+                    <form method= 'POST'> 
                         <button class="btn btn-success" name="approve"><a href="adminApprove.php?IdVariableName='<?php //echo Claim or User ID ?>'" style="color:white;">Approve Claim </a> </button>
                         <button class="btn btn-danger" style="color:white;" name="deny"><a href="adminDeny.php?IdVariableName='<?php// echo Claim or User ID ?>'" style="color:white;">Deny Claim</a></button>
                         <!-- Redirects to printer friendly page (No Styling) and automatically opens up print function -->
                         <button class="btn btn-primary" style=" background-color: #809fff; color:white;" name="printButton"><a href="adminViewSpecificClaimPrint.php?" style="color:white;">Print Page</a></button>
-
+                    </form>
                     </td>
                 </tr>
                 
@@ -95,22 +99,24 @@
             </div>
             
             <?php 
-            include('adminNavbar.php');
-            include('db.php');
-
-              <p class="jumbotron" style="font-size:40px; background-color: #ffe5ea; text-align:center; color:black;">Admin View Specific Claim</p>
-              <br><br><br><br>
-              
-              
               //UPDATE CLAIMS TABLE AND UPDATE APPLICATION STATUS TO EITHER APPROVED  
+              
+              $claim_id = $_GET['claim_id'];
+              echo $claim_id;
               if(isset($POST['approve'])){
-                $sql = "UPDATE claims SET application_status='Approved' WHERE applicant_soc_sec = "
+                $sql = "UPDATE claims SET application_status='Approved' WHERE claim_id = '$claim_id'";
               }
-
               if(isset($POST['deny'])){
-                $sql = "UPDATE"
+                $sql = "UPDATE claims SET application_status = 'Denied' WHERE claim_id = '$claim_id' ";
               }
-
+              $result= mysqli_query($conn, $sql)
+              if($result){
+                echo "Record updated successfully";
+              } else {
+                echo "Error updating record: " . mysqli_error($conn);
+              }
+              
+              mysqli_close($conn);
             ?>
        </div>
     </body>
