@@ -28,17 +28,11 @@ include('db.php');
             <br>
            <div class="col-mid-3"></div>
             <div class = "container">
-            <p><font size=+2><center>In light of recent events, BDPA Unemployment has updated its
-            platform for DC residents to file for unemployment. New users
-             will navigate to the <b>Questionnaire Page</b> answering questions about themselves 
-             and the circumstances of their unemployment. Your eligibility to file a claim 
-             will be based on your answers to the questionnaire. If eligible, new users will navigate to 
-             the <b> Make A Claim Page </b> where they will enter more information 
-             about themselves and their employer. If you are an exisiting user, 
-             navigate to the <b> User Sign-in Page </b>and enter your 
-             username and password. Afterward, you will be directed to the 
-             <b> User View Claim Page </b> in which the status of your unemployment claim 
-             can be seen. The <b>Get Started Button</b> below will take new users to the <b>Questionnaire Page</b>.</center></font size></p>
+            <p><font size=+2><center>If you have not filed a claim before, navigate to
+             the <b>File A Claim</b> page in the navbar or click the <b>File A Claim</b> 
+             button. You will be asked a series of questions about yourself and your employer.
+             If you have already filed a claim, you can view the status of your claim by navigating to 
+             your <b>Inbox</b> in the navbar.</center></font size></p>
              </div>
               <div class="col-mid-3"></div>
             <h3><font size=+2><center>We appreciate your patience during this time.</center></font size></h3>
