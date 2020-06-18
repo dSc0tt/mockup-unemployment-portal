@@ -28,15 +28,12 @@
             <div class = "container">
             <p><font size=+2><center>In light of recent events, BDPA Unemployment has updated its
             platform for DC residents to file for unemployment. New users
-             will navigate to the <b>Questionnaire Page</b> answering questions about themselves 
-             and the circumstances of their unemployment. Your eligibility to file a claim 
-             will be based on your answers to the questionnaire. If eligible, new users will navigate to 
-             the <b> Make A Claim Page </b> where they will enter more information 
-             about themselves and their employer. If you are an exisiting user, 
-             navigate to the <b> User Sign-in Page </b>and enter your 
-             username and password. Afterward, you will be directed to the 
-             <b> User View Claim Page </b> in which the status of your unemployment claim 
-             can be seen. The <b>Get Started Button</b> below will take new users to the <b>Questionnaire Page</b>.</center></font size></p>
+             will navigate to the <b>Questionnaire</b> page answering questions about themselves 
+             and the circumstances of their unemployment. The <b>Get Started Button</b> below will take new users 
+             to the <b>Questionnaire</b> page. Your eligibility to file a claim 
+             will be based on your answers to the questionnaire. If you are an exisiting user, 
+             navigate to the <b> Sign-in </b> page and enter your 
+             username and password. </center></font size></p>
              </div>
               <div class="col-mid-3"></div>
             <h3><font size=+2><center>We appreciate your patience during this time.</center></font size></h3>
