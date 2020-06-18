@@ -11,8 +11,10 @@ $peZip = "";
 $peCity = "";
 $peEmail = "";
 $pePhone = "";
+$valid= "";
 if(isset($_POST['submit'])){
     echo('If the submit button works');
+    $valid= "true";
     $doe = $_POST['Year']. '-' .$_POST['Month']. '-' .$_POST['Day'];
     $salary = $_POST['peSalary'];
     $peName = $_POST['peName'];
@@ -28,63 +30,63 @@ if(isset($_POST['submit'])){
     //check if fields are empty
     if($doe == '')
     {
-        echo '<div class="alert alert-danger" role="alert">
-        You must enter your last date of employment.
-          <!--Close button on alert-->
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-                </button>
-                  </div>';
+      $valid="false";
+      echo '<div class="alert alert-danger" role="alert">
+      You must enter your last date of employment.
+        <!--Close button on alert-->
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+              </button>
+                </div>';
     }
     if($salary == '')
     {
-        echo '<div class="alert alert-danger" role="alert">
-        You must enter your current salary.
-          <!--Close button on alert-->
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-                </button>
-                  </div>';
+      $valid="false";
+      echo '<div class="alert alert-danger" role="alert">
+      You must enter your current salary.
+        <!--Close button on alert-->
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+              </button>
+                </div>';
     }
     if($peName == '')
     {
-        echo "<div class='alert alert-danger' role='alert'>
-        You must enter your previous employer's name.
-          <!--Close button on alert-->
-            <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-              <span aria-hidden='true'>&times;</span>
-                </button>
-                  </div>";
+      $valid="false";
+      echo "<div class='alert alert-danger' role='alert'>
+      You must enter your previous employer's name.
+        <!--Close button on alert-->
+          <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+            <span aria-hidden='true'>&times;</span>
+              </button>
+                </div>";
     }
     if($peDept == '')
     {
-        echo '<div class="alert alert-danger" role="alert">
-        You must enter your previous department.
-          <!--Close button on alert-->
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-                </button>
-                  </div>';
+      $valid="false";
+      echo '<div class="alert alert-danger" role="alert">
+      You must enter your previous department.
+        <!--Close button on alert-->
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+              </button>
+                </div>';
     }
     if($peAddress == '')
     {
-        echo "<div class='alert alert-danger' role='alert'>
-        You must enter your previous employer's address.
-          <!--Close button on alert-->
-            <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-              <span aria-hidden='true'>&times;</span>
-                </button>
-                  </div>";
+      $valid="false";
+      echo "<div class='alert alert-danger' role='alert'>
+      You must enter your previous employer's address.
+        <!--Close button on alert-->
+          <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+            <span aria-hidden='true'>&times;</span>
+              </button>
+                </div>";
     }
     if($state == 'null')
     {
-        echo "<div class='alert alert-danger' role='alert'>
-        You must select your previous employer's state.
-          <!--Close button on alert-->
-            <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-              <span aria-hidden='true'>&times;</span>
-                </button>
-                  </div>";
+      $valid="false";
+      echo "<div cl  iv>";
     }
     if($peZip == '')
     {
