@@ -136,7 +136,7 @@ if(isset($_POST['submit'])){
           $query="INSERT INTO claims(last_date_of_employment, employer_name, department, employer_address, employer_state_id, employer_zip_code, employer_city, employer_email, employer_phone, salary, applicant_soc_sec, application_status, open, admin_id) 
           VALUES('$doe', '$peName', '$peDept', '$peAddress', '$state', '$peZip', '$peCity', '$peEmail', '$pePhone', '$salary', '$ssn', 'P', 'Y', '$admin')";
           $result = mysqli_query($conn, $query);
-          header('location:appHome.php'); //should go to the view claim page, or a success page
+          header('location:appHome.php');  //should go to the view claim page, or a success page
         }
     }
 ?>
