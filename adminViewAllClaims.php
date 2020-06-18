@@ -40,6 +40,8 @@ $result=mysqli_query($conn,$query);
               <td ><?php echo $row["employer_name"];?></td>
               <td ><?php if($row["application_status"]='P'){ echo 'Pending ';}?></td>
               <td><button type="submit" class="btn btn-block btn-outline-secondary" style="background-color:#b0d6ae;  height: 50px; width:100px;" onclick="location.href='adminViewSpecificClaim.php?claim_id=<?php echo $row['claim_id']; ?>'" name="view">View Claim</button></td>
+              <td><button type="submit" class="btn btn-block btn-outline-secondary" style="background-color:#b0d6ae;  height: 50px; width:100px;" onclick="location.href='adminDeletClaim.php?claim_id=<?php echo $row['claim_id']; ?>'" name="Delete">Delete Claim</button></td>
+
             </tr>
           <?php }?>
         </table>

@@ -80,8 +80,8 @@ include('adminViewSpecificClaimDeny.php');
                 </tr>
                 <tr>
                     <td>
-                    <form method= 'POST'> 
-                        <button class="btn btn-success" name="approve"><a href="adminApprove.php?IdVariableName='<?php //echo Claim or User ID ?>'" style="color:white;">Approve Claim </a> </button>
+                    <form method='POST'> 
+                        <button class="btn btn-success" name="approve"><!--<a href="adminApprove.php?IdVariableName='<?php //echo Claim or User ID ?>'" style="color:white;">-->Approve Claim <!--</a>--> </button>
                         <button class="btn btn-danger" style="color:white;" name="deny"><a href="adminDeny.php?IdVariableName='<?php// echo Claim or User ID ?>'" style="color:white;">Deny Claim</a></button>
                         <!-- Redirects to printer friendly page (No Styling) and automatically opens up print function -->
                         <button class="btn btn-primary" style=" background-color: #809fff; color:white;" name="printButton"><a href="adminViewSpecificClaimPrint.php?" style="color:white;">Print Page</a></button>
@@ -102,25 +102,27 @@ include('adminViewSpecificClaimDeny.php');
             
            <!--?php 
               //UPDATE CLAIMS TABLE AND UPDATE APPLICATION STATUS TO EITHER APPROVED  
-              
+              echo 'well at least the php works|';
               $claim_id = $_GET['claim_id'];
               echo $claim_id;
-              if(isset($POST['approve'])){
-                $sql = "UPDATE claims SET application_status='Approved' WHERE claim_id = '$claim_id'";
+              if(isset($_POST['approve'])){
+                echo 'approve button clicked';
+                $sql = "UPDATE claims SET application_status='A' WHERE claim_id = '$claim_id'";
+                echo $sql;
+                $result= mysqli_query($conn, $sql);
+                if(mysqli_num_rows($result)>0){
+                  echo "Record updated successfully";
+                } 
+                else {
+                  echo "Error updating record: " . mysqli_error($conn);
+                }
               }
-              if(isset($POST['deny'])){
+              if(isset($_POST['deny'])){
                 $sql = "UPDATE claims SET application_status = 'Denied' WHERE claim_id = '$claim_id' ";
               }
-              $result= mysqli_query($conn, $sql)
-              if($result){
-                echo "Record updated successfully";
-              } 
-              else {
-                echo "Error updating record: " . mysqli_error($conn);
-              }
               
-              mysqli_close($conn);
-            ?-->
+              
+            ?>
        </div>
     </body>
 </html>

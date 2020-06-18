@@ -17,7 +17,6 @@ $gender = "";
 $dob = "";
 $valid = "";
 if(isset($_POST['submit'])){
-<<<<<<< HEAD
   $valid = "true";
   $fname = $_POST['firstname'];
   $lname = $_POST['lastname'];
@@ -136,83 +135,6 @@ if(isset($_POST['submit'])){
   {
     $valid = "false";
     echo '<div class="alert alert-danger" role="alert">
-=======
-    $fname = $_POST['firstname'];
-    $lname = $_POST['lastname'];
-    $soc = $_POST['SSN1'].$_POST['SSN2'].$_POST['SSN3'];
-    $email = $_POST['email'];
-    $address = $_POST['address'];
-    $city = $_POST['city'];
-    $state = $_POST['states'];
-    $zip = $_POST['zipcode'];
-    $uname = $_POST['username'];
-    $gender = $_POST['gender'];
-    $day=$_POST['Day'];
-    $month=$_POST['Month'];
-    $year=$_POST['Year'];
-    $dob = $year. '-' .$month. '-' .$day;
-    //check if fields are empty
-    if($fname == '')
-    {
-      $valid = "false";
-      echo '<div class="alert alert-danger" role="alert">
-      You must enter your first name.
-        <!--Close button on alert-->
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-              </button>
-                </div>';
-                  
-    }
-    if($lname == '')
-    {
-      $valid = "false";
-      echo '<div class="alert alert-danger" role="alert">
-      You must enter your last name.
-        <!--Close button on alert-->
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-              </button>
-                </div>';
-    }
-    if($uname == '')
-    {
-      $valid = "false";
-      echo '<div class="alert alert-danger" role="alert">
-      You must enter a username.
-        <!--Close button on alert-->
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-              </button>
-                </div>';
-    }
-    if($email == '')
-    {
-      $valid = "false";
-      echo '<div class="alert alert-danger" role="alert">
-      You must enter an email address.
-        <!--Close button on alert-->
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-              </button>
-                </div>';
-    }
-    if($gender == 'null')
-    {
-      $valid = "false";
-      echo '<div class="alert alert-danger" role="alert">
-      You must select a gender.
-        <!--Close button on alert-->
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-              </button>
-                </div>';
-    }
-    if($dob == '--')
-    {
-      $valid = "false";
-      echo '<div class="alert alert-danger" role="alert">
->>>>>>> 99f79ccdf343130158b46029da692cfe2e28e7f2
       You must enter your date of birth.
         <!--Close button on alert-->
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
