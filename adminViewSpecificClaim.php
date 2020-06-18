@@ -5,12 +5,14 @@
 //This page will not be like a display page because there is no data repating itself. 
 //All you need to do is grab information from database, set variables for the information that you grab, then echo the information.
 //UPDATE CLAIMS TABLE AND UPDATE APPLICATION STATUS TO EITHER APPROVED
-/*include_once('db.php');
+include_once('db.php');
 $adminID=$_SESSION['adminID'];
 $query= "SELECT a.first_name, a.last_name, c.application_status, c.employer_name, c.claim_id, c.applicant_soc_sec  FROM applicants AS a INNER JOIN claims AS c ON a.soc_sec_id= c.applicant_soc_sec AND c.admin_id='$adminID' AND c.open = 'Y'";
-$result=mysqli_query($conn,$query);*/
+$result=mysqli_query($conn,$query);
+$_SESSION['claim_id'] = $_GET['claim_id'];
 include('adminViewSpecificClaimApprove.php');
 include('adminViewSpecificClaimDeny.php');
+
 ?>
 <html>
     <head>
@@ -100,29 +102,6 @@ include('adminViewSpecificClaimDeny.php');
               <p style="text-align: Center"><center>Phone Number: 1-240-XXX-XXXX</center></p>
             </div>
             
-           <!--?php 
-              //UPDATE CLAIMS TABLE AND UPDATE APPLICATION STATUS TO EITHER APPROVED  
-              echo 'well at least the php works|';
-              $claim_id = $_GET['claim_id'];
-              echo $claim_id;
-              if(isset($_POST['approve'])){
-                echo 'approve button clicked';
-                $sql = "UPDATE claims SET application_status='A' WHERE claim_id = '$claim_id'";
-                echo $sql;
-                $result= mysqli_query($conn, $sql);
-                if(mysqli_num_rows($result)>0){
-                  echo "Record updated successfully";
-                } 
-                else {
-                  echo "Error updating record: " . mysqli_error($conn);
-                }
-              }
-              if(isset($_POST['deny'])){
-                $sql = "UPDATE claims SET application_status = 'Denied' WHERE claim_id = '$claim_id' ";
-              }
-              
-              
-            ?>
        </div>
     </body>
 </html>
