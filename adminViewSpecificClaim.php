@@ -112,7 +112,8 @@ $result=mysqli_query($conn,$query);
               $result= mysqli_query($conn, $sql)
               if($result){
                 echo "Record updated successfully";
-              } else {
+              } 
+              else {
                 echo "Error updating record: " . mysqli_error($conn);
               }
               
