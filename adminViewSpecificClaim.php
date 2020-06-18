@@ -5,10 +5,12 @@
 //This page will not be like a display page because there is no data repating itself. 
 //All you need to do is grab information from database, set variables for the information that you grab, then echo the information.
 //UPDATE CLAIMS TABLE AND UPDATE APPLICATION STATUS TO EITHER APPROVED
-include_once('db.php');
+/*include_once('db.php');
 $adminID=$_SESSION['adminID'];
 $query= "SELECT a.first_name, a.last_name, c.application_status, c.employer_name, c.claim_id, c.applicant_soc_sec  FROM applicants AS a INNER JOIN claims AS c ON a.soc_sec_id= c.applicant_soc_sec AND c.admin_id='$adminID' AND c.open = 'Y'";
-$result=mysqli_query($conn,$query);
+$result=mysqli_query($conn,$query);*/
+include('adminViewSpecificClaimApprove.php');
+include('adminViewSpecificClaimDeny.php');
 ?>
 <html>
     <head>
@@ -98,7 +100,7 @@ $result=mysqli_query($conn,$query);
               <p style="text-align: Center"><center>Phone Number: 1-240-XXX-XXXX</center></p>
             </div>
             
-            <?php 
+           <!--?php 
               //UPDATE CLAIMS TABLE AND UPDATE APPLICATION STATUS TO EITHER APPROVED  
               
               $claim_id = $_GET['claim_id'];
@@ -118,7 +120,7 @@ $result=mysqli_query($conn,$query);
               }
               
               mysqli_close($conn);
-            ?>
+            ?-->
        </div>
     </body>
 </html>
